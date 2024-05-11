@@ -169,5 +169,11 @@
             "two pointers",
             "array"
         ]
+    },
+    "21. Merge Two Sorted Lists": {
+        "difficulty": "easy",
+        "topics": [
+            "linked list"
+        ]
     }
 }

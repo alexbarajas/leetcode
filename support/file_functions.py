@@ -96,4 +96,5 @@ def refresh_symbolic_link_commands_file():
     generate_symbolic_link_commands()
 
 
-# refresh_symbolic_link_commands_file()
+refresh_symbolic_link_commands_file()
+# add_leetcode_file()

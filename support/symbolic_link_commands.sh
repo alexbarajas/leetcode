@@ -73,3 +73,5 @@ ln -s ../../../all_leetcode/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\
 ln -s ../../../all_leetcode/42.\ Trapping\ Rain\ Water.py ../leetcode_groups/difficulties/hard/42.\ Trapping\ Rain\ Water.py
 ln -s ../../../all_leetcode/42.\ Trapping\ Rain\ Water.py ../leetcode_groups/topics/two_pointers/42.\ Trapping\ Rain\ Water.py
 ln -s ../../../all_leetcode/42.\ Trapping\ Rain\ Water.py ../leetcode_groups/topics/array/42.\ Trapping\ Rain\ Water.py
+ln -s ../../../all_leetcode/21.\ Merge\ Two\ Sorted\ Lists.py ../leetcode_groups/difficulties/easy/21.\ Merge\ Two\ Sorted\ Lists.py
+ln -s ../../../all_leetcode/21.\ Merge\ Two\ Sorted\ Lists.py ../leetcode_groups/topics/linked_list/21.\ Merge\ Two\ Sorted\ Lists.py
