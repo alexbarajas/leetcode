@@ -1,1 +1,0 @@
-../../all_leetcode/2000. Reverse Prefix of Word.py
