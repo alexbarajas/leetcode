@@ -1,0 +1,32 @@
+{
+    "easy": [
+        "1. Two Sum",
+        "9. Palindrome Number",
+        "14. Longest Common Prefix",
+        "104. Maximum Depth of Binary Tree",
+        "226. Invert Binary Tree",
+        "463. Island Perimeter",
+        "506. Relative Ranks",
+        "1137. N-th Tribonacci Number",
+        "1469. Find All The Lonely Nodes",
+        "2000. Reverse Prefix of Word",
+        "2441. Largest Positive Integer That Exists With Its Negative"
+    ],
+    "medium": [
+        "49. Group Anagrams",
+        "200. Number of Islands",
+        "623. Add One Row to Tree",
+        "786. K-th Smallest Prime Fraction",
+        "881. Boats to Save People",
+        "988. Smallest String Starting From Leaf",
+        "1992. Find All Groups of Farmland",
+        "2370. Longest Ideal Subsequence",
+        "2461. Maximum Sum of Distinct Subarrays With Length K",
+        "2816. Double a Number Represented as a Linked List",
+        "3075. Maximize Happiness of Selected Children",
+        "3119. Maximum Number of Potholes That Can Be Fixed"
+    ],
+    "hard": [
+        "42. Trapping Rain Water"
+    ]
+}
