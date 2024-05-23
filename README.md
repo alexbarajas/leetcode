@@ -1,5 +1,6 @@
 # How to use the Support File:
 1. ```refresh_symbolic_link_commands_file()``` if you have stuff in the leetcode_difficulties.json file and want to refresh the symbolic_link_commands.sh file
+2. if you want to add a leetcode to its proper places then just run ```add_leetcode_file()``` inside of ```file_functions.py```
 
 
 

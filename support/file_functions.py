@@ -61,7 +61,7 @@ def create_leetcode_python_file(leetcode_name):
 def add_leetcode_file():
     leetcode_file = input("What leetcode file? (ex. '1. Two Sum'): ")
     difficulty = input("What difficulty? (easy / medium / hard): ")
-    tags = input("What tags separated by commas? (ex. 'array, hashmap'): ")
+    tags = input("What tags separated by commas? (ex. 'array, hash table'): ")
     topics = [tag.strip() for tag in tags.split(",")] if tags else []
     leetcode_data = load_leetcode_data()
     if leetcode_file not in leetcode_data:
@@ -72,6 +72,8 @@ def add_leetcode_file():
         save_leetcode_data(leetcode_data)
         create_leetcode_python_file(leetcode_file)
         generate_symbolic_link_commands()
+    else:
+        print(f"{leetcode_file} is already in the data")
 
 
 def generate_symbolic_link_commands():
@@ -96,5 +98,29 @@ def refresh_symbolic_link_commands_file():
     generate_symbolic_link_commands()
 
 
-refresh_symbolic_link_commands_file()
-# add_leetcode_file()
+# refresh_symbolic_link_commands_file()
+add_leetcode_file()
+
+
+# TODO right now the json file is like
+#  "1. Two Sum": {
+#      "difficulty": "easy",
+#      "topics": [
+#          "array",
+#          "hash table"
+#      ]
+#  },
+#  make it so it's like this
+#  "1. Two Sum": {
+#      "difficulty": "easy",
+#      "topics": [
+#          "array",
+#          "hash table"
+#      ],
+#      "study_list" : [
+#          "75_quick_study",
+#          "favorites",
+#          "good_to_review"
+#      ]
+#  },
+#  for example

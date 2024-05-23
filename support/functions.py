@@ -7,16 +7,17 @@ def array_to_tree(values):
 
     nodes = [TreeNode(val) if val is not None else None for val in values]
 
-    for i in range(len(nodes)):
-        if nodes[i] is not None:
-            left_child_index = 2 * i + 1
-            right_child_index = 2 * i + 2
-            if left_child_index < len(nodes):
-                nodes[i].left = nodes[left_child_index]
-            if right_child_index < len(nodes):
-                nodes[i].right = nodes[right_child_index]
+    children = nodes[::-1]
+    root = children.pop()
 
-    return nodes[0]
+    for node in nodes:
+        if node:
+            if children:
+                node.left = children.pop()
+            if children:
+                node.right = children.pop()
+
+    return root
 
 
 def tree_to_array(root):

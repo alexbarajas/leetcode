@@ -175,5 +175,144 @@
         "topics": [
             "linked list"
         ]
+    },
+    "2373. Largest Local Values in a Matrix": {
+        "difficulty": "easy",
+        "topics": [
+            "array",
+            "matrix"
+        ]
+    },
+    "217. Contains Duplicate": {
+        "difficulty": "easy",
+        "topics": [
+            "hash table"
+        ]
+    },
+    "242. Valid Anagram": {
+        "difficulty": "easy",
+        "topics": [
+            "hash table",
+            "string"
+        ]
+    },
+    "347. Top K Frequent Elements": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "heap"
+        ]
+    },
+    "238. Product of Array Except Self": {
+        "difficulty": "medium",
+        "topics": [
+            "array"
+        ]
+    },
+    "128. Longest Consecutive Sequence": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table"
+        ]
+    },
+    "125. Valid Palindrome": {
+        "difficulty": "easy",
+        "topics": [
+            "string",
+            "two pointers"
+        ]
+    },
+    "15. 3Sum": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "two pointers"
+        ]
+    },
+    "11. Container With Most Water": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "two pointers",
+            "greedy"
+        ]
+    },
+    "121. Best Time to Buy and Sell Stock": {
+        "difficulty": "easy",
+        "topics": [
+            "array",
+            "greedy"
+        ]
+    },
+    "3. Longest Substring Without Repeating Characters": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "sliding window"
+        ]
+    },
+    "424. Longest Repeating Character Replacement": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "sliding window"
+        ]
+    },
+    "76. Minimum Window Substring": {
+        "difficulty": "hard",
+        "topics": [
+            "hash table"
+        ]
+    },
+    "861. Score After Flipping Matrix": {
+        "difficulty": "medium",
+        "topics": [
+            "greedy",
+            "bit manipulation",
+            "matrix"
+        ]
+    },
+    "64. Minimum Path Sum": {
+        "difficulty": "medium",
+        "topics": [
+            "matrix",
+            "dynamic programming"
+        ]
+    },
+    "1325. Delete Leaves With a Given Value": {
+        "difficulty": "medium",
+        "topics": [
+            "dfs",
+            "binary tree"
+        ]
+    },
+    "78. Subsets": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "backtracking"
+        ]
+    },
+    "36. Valid Sudoku": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "matrix"
+        ]
+    },
+    "131. Palindrome Partitioning": {
+        "difficulty": "medium",
+        "topics": [
+            "string",
+            "dynamic programming"
+        ]
+    },
+    "2597. The Number of Beautiful Subsets": {
+        "difficulty": "medium",
+        "topics": [
+            "backtracking",
+            "hash table",
+            "array"
+        ]
     }
 }
