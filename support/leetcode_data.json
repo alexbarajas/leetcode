@@ -314,5 +314,106 @@
             "hash table",
             "array"
         ]
+    },
+    "140. Word Break II": {
+        "difficulty": "hard",
+        "topics": [
+            "backtracking",
+            "string"
+        ]
+    },
+    "139. Word Break": {
+        "difficulty": "medium",
+        "topics": [
+            "backtracking",
+            "bfs"
+        ]
+    },
+    "290. Word Pattern": {
+        "difficulty": "easy",
+        "topics": [
+            "hash table",
+            "string"
+        ]
+    },
+    "291. Word Pattern II": {
+        "difficulty": "medium",
+        "topics": [
+            "backtracking",
+            "string",
+            "hash table"
+        ]
+    },
+    "1608. Special Array With X Elements Greater Than or Equal X": {
+        "difficulty": "easy",
+        "topics": [
+            "array"
+        ]
+    },
+    "1208. Get Equal Substrings Within Budget": {
+        "difficulty": "medium",
+        "topics": [
+            "string",
+            "sliding window",
+            "prefix sum"
+        ]
+    },
+    "1404. Number of Steps to Reduce a Number in Binary Representation to One": {
+        "difficulty": "medium",
+        "topics": [
+            "string",
+            "bit manipulation"
+        ]
+    },
+    "3167. Better Compression of String": {
+        "difficulty": "medium",
+        "topics": [
+            "string"
+        ]
+    },
+    "409. Longest Palindrome": {
+        "difficulty": "easy",
+        "topics": [
+            "hash table",
+            "string",
+            "greedy"
+        ]
+    },
+    "187. Repeated DNA Sequences": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "string"
+        ]
+    },
+    "531. Lonely Pixel I": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "array",
+            "matrix"
+        ]
+    },
+    "1366. Rank Teams by Votes": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "hash table",
+            "string"
+        ]
+    },
+    "2083. Substrings That Begin and End With the Same Letter": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "string"
+        ]
+    },
+    "1762. Buildings With an Ocean View": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "stack"
+        ]
     }
 }

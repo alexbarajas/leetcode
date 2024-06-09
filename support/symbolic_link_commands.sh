@@ -134,3 +134,48 @@ ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../lee
 ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../leetcode_groups/topics/backtracking/2597.\ The\ Number\ of\ Beautiful\ Subsets.py
 ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../leetcode_groups/topics/hash_table/2597.\ The\ Number\ of\ Beautiful\ Subsets.py
 ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../leetcode_groups/topics/array/2597.\ The\ Number\ of\ Beautiful\ Subsets.py
+ln -s ../../../all_leetcode/140.\ Word\ Break\ II.py ../leetcode_groups/difficulties/hard/140.\ Word\ Break\ II.py
+ln -s ../../../all_leetcode/140.\ Word\ Break\ II.py ../leetcode_groups/topics/backtracking/140.\ Word\ Break\ II.py
+ln -s ../../../all_leetcode/140.\ Word\ Break\ II.py ../leetcode_groups/topics/string/140.\ Word\ Break\ II.py
+ln -s ../../../all_leetcode/139.\ Word\ Break.py ../leetcode_groups/difficulties/medium/139.\ Word\ Break.py
+ln -s ../../../all_leetcode/139.\ Word\ Break.py ../leetcode_groups/topics/backtracking/139.\ Word\ Break.py
+ln -s ../../../all_leetcode/139.\ Word\ Break.py ../leetcode_groups/topics/bfs/139.\ Word\ Break.py
+ln -s ../../../all_leetcode/290.\ Word\ Pattern.py ../leetcode_groups/difficulties/easy/290.\ Word\ Pattern.py
+ln -s ../../../all_leetcode/290.\ Word\ Pattern.py ../leetcode_groups/topics/hash_table/290.\ Word\ Pattern.py
+ln -s ../../../all_leetcode/290.\ Word\ Pattern.py ../leetcode_groups/topics/string/290.\ Word\ Pattern.py
+ln -s ../../../all_leetcode/291.\ Word\ Pattern\ II.py ../leetcode_groups/difficulties/medium/291.\ Word\ Pattern\ II.py
+ln -s ../../../all_leetcode/291.\ Word\ Pattern\ II.py ../leetcode_groups/topics/backtracking/291.\ Word\ Pattern\ II.py
+ln -s ../../../all_leetcode/291.\ Word\ Pattern\ II.py ../leetcode_groups/topics/string/291.\ Word\ Pattern\ II.py
+ln -s ../../../all_leetcode/291.\ Word\ Pattern\ II.py ../leetcode_groups/topics/hash_table/291.\ Word\ Pattern\ II.py
+ln -s ../../../all_leetcode/1608.\ Special\ Array\ With\ X\ Elements\ Greater\ Than\ or\ Equal\ X.py ../leetcode_groups/difficulties/easy/1608.\ Special\ Array\ With\ X\ Elements\ Greater\ Than\ or\ Equal\ X.py
+ln -s ../../../all_leetcode/1608.\ Special\ Array\ With\ X\ Elements\ Greater\ Than\ or\ Equal\ X.py ../leetcode_groups/topics/array/1608.\ Special\ Array\ With\ X\ Elements\ Greater\ Than\ or\ Equal\ X.py
+ln -s ../../../all_leetcode/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py ../leetcode_groups/difficulties/medium/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py
+ln -s ../../../all_leetcode/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py ../leetcode_groups/topics/string/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py
+ln -s ../../../all_leetcode/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py ../leetcode_groups/topics/sliding_window/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py
+ln -s ../../../all_leetcode/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py ../leetcode_groups/topics/prefix_sum/1208.\ Get\ Equal\ Substrings\ Within\ Budget.py
+ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py ../leetcode_groups/difficulties/medium/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py
+ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py ../leetcode_groups/topics/string/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py
+ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py ../leetcode_groups/topics/bit_manipulation/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py
+ln -s ../../../all_leetcode/3167.\ Better\ Compression\ of\ String.py ../leetcode_groups/difficulties/medium/3167.\ Better\ Compression\ of\ String.py
+ln -s ../../../all_leetcode/3167.\ Better\ Compression\ of\ String.py ../leetcode_groups/topics/string/3167.\ Better\ Compression\ of\ String.py
+ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/difficulties/easy/409.\ Longest\ Palindrome.py
+ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/topics/hash_table/409.\ Longest\ Palindrome.py
+ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/topics/string/409.\ Longest\ Palindrome.py
+ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/topics/greedy/409.\ Longest\ Palindrome.py
+ln -s ../../../all_leetcode/187.\ Repeated\ DNA\ Sequences.py ../leetcode_groups/difficulties/medium/187.\ Repeated\ DNA\ Sequences.py
+ln -s ../../../all_leetcode/187.\ Repeated\ DNA\ Sequences.py ../leetcode_groups/topics/hash_table/187.\ Repeated\ DNA\ Sequences.py
+ln -s ../../../all_leetcode/187.\ Repeated\ DNA\ Sequences.py ../leetcode_groups/topics/string/187.\ Repeated\ DNA\ Sequences.py
+ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/difficulties/medium/531.\ Lonely\ Pixel\ I.py
+ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/hash_table/531.\ Lonely\ Pixel\ I.py
+ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/array/531.\ Lonely\ Pixel\ I.py
+ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/matrix/531.\ Lonely\ Pixel\ I.py
+ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/difficulties/medium/1366.\ Rank\ Teams\ by\ Votes.py
+ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/topics/array/1366.\ Rank\ Teams\ by\ Votes.py
+ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/topics/hash_table/1366.\ Rank\ Teams\ by\ Votes.py
+ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/topics/string/1366.\ Rank\ Teams\ by\ Votes.py
+ln -s ../../../all_leetcode/2083.\ Substrings\ That\ Begin\ and\ End\ With\ the\ Same\ Letter.py ../leetcode_groups/difficulties/medium/2083.\ Substrings\ That\ Begin\ and\ End\ With\ the\ Same\ Letter.py
+ln -s ../../../all_leetcode/2083.\ Substrings\ That\ Begin\ and\ End\ With\ the\ Same\ Letter.py ../leetcode_groups/topics/hash_table/2083.\ Substrings\ That\ Begin\ and\ End\ With\ the\ Same\ Letter.py
+ln -s ../../../all_leetcode/2083.\ Substrings\ That\ Begin\ and\ End\ With\ the\ Same\ Letter.py ../leetcode_groups/topics/string/2083.\ Substrings\ That\ Begin\ and\ End\ With\ the\ Same\ Letter.py
+ln -s ../../../all_leetcode/1762.\ Buildings\ With\ an\ Ocean\ View.py ../leetcode_groups/difficulties/medium/1762.\ Buildings\ With\ an\ Ocean\ View.py
+ln -s ../../../all_leetcode/1762.\ Buildings\ With\ an\ Ocean\ View.py ../leetcode_groups/topics/array/1762.\ Buildings\ With\ an\ Ocean\ View.py
+ln -s ../../../all_leetcode/1762.\ Buildings\ With\ an\ Ocean\ View.py ../leetcode_groups/topics/stack/1762.\ Buildings\ With\ an\ Ocean\ View.py

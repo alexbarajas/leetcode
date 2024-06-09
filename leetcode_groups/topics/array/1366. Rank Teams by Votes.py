@@ -1,0 +1,1 @@
+../../../all_leetcode/1366. Rank Teams by Votes.py
