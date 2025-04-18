@@ -40,9 +40,9 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata):
-    """Generates a Markdown table row for the README."""
-    relative_path = os.path.join("..", ALL_LEETCODE_DIR, metadata["filename"])
-    return f"| [{metadata['title']}]({metadata['link']}) | [{metadata['filename']}]({relative_path}) | {', '.join([topic.replace("_", " ").title() for topic in metadata['topics']])} |\n"
+    """Generates a simplified Markdown table row for topic-specific READMEs."""
+    relative_path = f"/all_leetcode/{metadata['filename']}"
+    return f"| [{metadata['title']}]({metadata['link']}) | [{metadata['filename']}]({relative_path}) |\n"
 
 
 if __name__ == "__main__":
