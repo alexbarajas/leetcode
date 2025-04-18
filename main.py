@@ -1,5 +1,6 @@
 import os
 import re
+import urllib.parse
 
 # --- Configuration ---
 ALL_LEETCODE_DIR = "all_leetcode"
@@ -40,8 +41,9 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata):
-    """Generates a simplified Markdown table row for topic-specific READMEs."""
-    relative_path = f"/all_leetcode/{metadata['filename']}"
+    """Generates a Markdown table row for the README with encoded link to local solutions."""
+    encoded_filename = urllib.parse.quote(metadata['filename'])
+    relative_path = f"/all_leetcode/{encoded_filename}"
     return f"| [{metadata['title']}]({metadata['link']}) | [{metadata['filename']}]({relative_path}) |\n"
 
 
