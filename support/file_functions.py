@@ -1,10 +1,13 @@
-import os
 import json
+import os
 import subprocess
+import urllib.parse
 
 JSON_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "leetcode_data.json"))
 ALL_LEETCODE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../all_leetcode"))
-SYMBOLIC_LINK_COMMAND_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../support/symbolic_link_commands.sh"))
+SYMBOLIC_LINK_COMMAND_FILE = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "../support/symbolic_link_commands.sh"))
+README_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../README.md"))
 
 
 def string_split(string, python_file=False):
@@ -93,34 +96,91 @@ def generate_symbolic_link_commands():
         pass
 
 
-def refresh_symbolic_link_commands_file():
-    save_leetcode_data(load_leetcode_data())
-    generate_symbolic_link_commands()
+def update_readme_file():
+    generate_readme_markdown()
 
 
-# refresh_symbolic_link_commands_file()
+# update_readme_file()
 add_leetcode_file()
 
 
-# TODO right now the json file is like
-#  "1. Two Sum": {
-#      "difficulty": "easy",
-#      "topics": [
-#          "array",
-#          "hash table"
-#      ]
-#  },
-#  make it so it's like this
-#  "1. Two Sum": {
-#      "difficulty": "easy",
-#      "topics": [
-#          "array",
-#          "hash table"
-#      ],
-#      "study_list" : [
-#          "75_quick_study",
-#          "favorites",
-#          "good_to_review"
-#      ]
-#  },
-#  for example
+def create_markdown_link(leetcode_name):
+    """Creates a relative Markdown link to the solution file, handling spaces."""
+    # Ensure the file has a .py extension for the path
+    file_name = leetcode_name + ".py"
+    # Construct the relative path
+    relative_path = os.path.join("all_leetcode", file_name).replace("\\", "/")  # Ensure forward slashes
+    # URL-encode the path to handle spaces and special characters safely in links
+    encoded_path = urllib.parse.quote(relative_path)
+    # Create the Markdown link: [display name](path)
+    return f"[{leetcode_name}]({encoded_path})"
+
+
+def generate_readme_markdown(leetcode_data):
+    """Generates Markdown content listing LeetCode problems by difficulty and topic."""
+    if not leetcode_data:
+        return "# LeetCode Solutions\n\nNo solutions added yet."
+
+    # --- Group problems by difficulty ---
+    problems_by_difficulty = {"easy": [], "medium": [], "hard": []}
+    all_topics = set()
+
+    for name, details in leetcode_data.items():
+        difficulty = details.get("difficulty", "unknown").lower()
+        topics = details.get("topics", [])
+        link = create_markdown_link(name)
+        topic_str = f"(Topics: {', '.join(topics)})" if topics else ""
+        markdown_line = f"- {link} {topic_str}"
+
+        if difficulty in problems_by_difficulty:
+            problems_by_difficulty[difficulty].append(markdown_line)
+        else:
+            # Handle potential unknown difficulties if JSON data is inconsistent
+            if "unknown" not in problems_by_difficulty:
+                problems_by_difficulty["unknown"] = []
+            problems_by_difficulty["unknown"].append(markdown_line)
+
+        for topic in topics:
+            all_topics.add(topic)
+
+    # --- Group problems by topic ---
+    problems_by_topic = {topic: [] for topic in all_topics}
+    for name, details in leetcode_data.items():
+        difficulty = details.get("difficulty", "Unknown").capitalize()
+        topics = details.get("topics", [])
+        link = create_markdown_link(name)
+        markdown_line = f"- {link} (Difficulty: {difficulty})"  # Show difficulty when grouped by topic
+
+        for topic in topics:
+            if topic in problems_by_topic:
+                problems_by_topic[topic].append(markdown_line)
+
+    # --- Assemble the Markdown string ---
+    markdown_content = ["# LeetCode Solutions"]
+
+    # Add Difficulty Section
+    markdown_content.append("\n## Problems by Difficulty")
+    # Add problems ensuring consistent order (Easy, Medium, Hard, then others)
+    for difficulty in ["easy", "medium", "hard"]:
+        if problems_by_difficulty.get(difficulty):
+            markdown_content.append(f"\n### {difficulty.capitalize()}")
+            markdown_content.extend(sorted(problems_by_difficulty[difficulty]))  # Sort alphabetically by name
+
+    # Add any other difficulties found (e.g., "unknown")
+    for difficulty, problems in problems_by_difficulty.items():
+        if difficulty not in ["easy", "medium", "hard"] and problems:
+            markdown_content.append(f"\n### {difficulty.capitalize()}")
+            markdown_content.extend(sorted(problems))  # Sort alphabetically
+
+    # Add Topic Section
+    markdown_content.append("\n## Problems by Topic")
+    if not problems_by_topic:
+        markdown_content.append("\n*No topics assigned yet.*")
+    else:
+        # Add problems for each topic, sorted alphabetically
+        for topic in sorted(list(all_topics)):  # Sort topics alphabetically
+            if problems_by_topic.get(topic):
+                markdown_content.append(f"\n### {topic.capitalize()}")
+                markdown_content.extend(sorted(problems_by_topic[topic]))  # Sort problems alphabetically
+
+    return "\n".join(markdown_content)

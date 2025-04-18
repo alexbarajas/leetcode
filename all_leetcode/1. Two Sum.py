@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 1. Two Sum
+Link: https://leetcode.com/problems/two-sum/
+Difficulty: Easy
+Topics: Array, Hash Table
+"""
+
 from typing import List
 
 
