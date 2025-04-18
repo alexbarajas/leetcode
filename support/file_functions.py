@@ -61,7 +61,7 @@ def create_leetcode_python_file(leetcode_name):
 def add_leetcode_file():
     leetcode_file = input("What leetcode file? (ex. '1. Two Sum'): ")
     difficulty = input("What difficulty? (easy / medium / hard): ")
-    tags = input("What tags separated by commas? (ex. 'array, hash table'): ")
+    tags = input("What tags separated by commas? (ex. 'array, hash table, 2d dynamic programming'): ")
     topics = [tag.strip() for tag in tags.split(",")] if tags else []
     leetcode_data = load_leetcode_data()
     if leetcode_file not in leetcode_data:

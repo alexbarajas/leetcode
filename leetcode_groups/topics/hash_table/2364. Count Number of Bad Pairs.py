@@ -1,0 +1,1 @@
+../../../all_leetcode/2364. Count Number of Bad Pairs.py

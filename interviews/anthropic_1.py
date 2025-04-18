@@ -1,121 +1,234 @@
-
-
 def solution(queries):
-    accounts = {}
-    results = []
-    accounts_with_most_activity = {}
-    transfers = 0
-    successful_transfers = {}
+    returned_data = []
+    query_data = {}
+    timestamp_data = {}
+    backups = {}
+    backups_total_backups = {}
 
-    TRANSFER_EXPIRATION_PERIOD = 86400000  # 24 hours in milliseconds
+    def set_query(query):
+        employee, field, value = query[1:]
+        query_data[employee] = query_data.get(employee, {})
+        query_data[employee][field] = value
+        returned_data.append("")
+
+    def get_query(query):
+        employee, field = query[1:]
+        if not query_data.get(employee, {}) or field not in query_data[employee]:
+            returned_data.append("")
+        else:
+            returned_data.append(query_data[employee][field])
+
+    def delete_query(query):
+        employee, field = query[1:]
+        if not query_data.get(employee, {}) or field not in query_data[employee]:
+            returned_data.append("false")
+        else:
+            query_data[employee].pop(field)
+            returned_data.append("true")
+
+    def scan_query(query):
+        employee = query[1]
+        if not query_data.get(employee, {}):
+            returned_data.append("")
+        else:
+            fields = []
+            for field, value in query_data[employee].items():
+                fields.append(f"{field}({value})")
+            fields.sort()
+            returned_data.append(", ".join(fields))
+
+    def scan_by_prefix_query(query):
+        employee, prefix = query[1:]
+        if not query_data.get(employee, {}):
+            returned_data.append("")
+        else:
+            fields = []
+            n = len(prefix)
+            for field, value in query_data[employee].items():
+                if field[:n] == prefix:
+                    fields.append(field)
+            fields.sort()
+            final_fields = []
+            for field in fields:
+                final_fields.append(f"{field}({query_data[employee][field]})")
+            returned_data.append(", ".join(final_fields))
+
+    def set_at_query(query):
+        employee, field, value, timestamp = query[1:]
+        query_data[employee] = query_data.get(employee, {})
+        query_data[employee][field] = value
+        returned_data.append("")
+
+        timestamp_data[employee] = timestamp_data.get(employee, {})
+        timestamp_data[employee][field] = [int(timestamp)]
+
+    def set_at_with_ttl_query(query):
+        employee, field, value, timestamp, ttl = query[1:]
+        query_data[employee] = query_data.get(employee, {})
+        query_data[employee][field] = value
+        returned_data.append("")
+        timestamp_data[employee] = timestamp_data.get(employee, {})
+        timestamp_data[employee][field] = [int(timestamp), int(timestamp) + int(ttl)]
+
+    def get_at_query(query):
+        employee, field, timestamp = query[1:]
+        if not query_data.get(employee, {}) or field not in query_data[employee]:
+            returned_data.append("")
+        else:
+            if len(timestamp_data[employee][field]) == 1 and timestamp_data[employee][field][0] <= int(timestamp):
+                returned_data.append(query_data[employee][field])
+            elif timestamp_data[employee][field][0] <= int(timestamp) < timestamp_data[employee][field][1]:
+                returned_data.append(query_data[employee][field])
+            else:
+                returned_data.append("")
+
+    def scan_by_prefix_at_query(query):
+        employee, prefix, timestamp = query[1:]
+        if not query_data.get(employee, {}):
+            returned_data.append("")
+        else:
+            fields = []
+            n = len(prefix)
+            for field, value in query_data[employee].items():
+                if field[:n] == prefix:
+                    if len(timestamp_data[employee][field]) == 1 and timestamp_data[employee][field][0] <= int(
+                            timestamp):
+                        fields.append(field)
+                    elif timestamp_data[employee][field][0] <= int(timestamp) < timestamp_data[employee][field][1]:
+                        fields.append(field)
+            fields.sort()
+            final_fields = []
+            for field in fields:
+                final_fields.append(f"{field}({query_data[employee][field]})")
+            returned_data.append(", ".join(final_fields))
+
+    def delete_at_query(query):
+        employee, field, timestamp = query[1:]
+        if not query_data.get(employee, {}) or field not in query_data[employee]:
+            returned_data.append("false")
+        else:
+            if len(timestamp_data[employee][field]) == 1 and timestamp_data[employee][field][0] <= int(timestamp):
+                query_data[employee].pop(field)
+                returned_data.append("true")
+            elif timestamp_data[employee][field][0] <= int(timestamp) < timestamp_data[employee][field][1]:
+                query_data[employee].pop(field)
+                returned_data.append("true")
+            else:
+                returned_data.append("false")
+
+    def scan_at(query):
+        employee, timestamp = query[1:]
+        if not query_data.get(employee, {}):
+            returned_data.append("")
+        else:
+            fields = []
+            for field, value in query_data[employee].items():
+                if len(timestamp_data[employee][field]) == 1 and timestamp_data[employee][field][0] <= int(timestamp):
+                    fields.append(f"{field}({value})")
+                elif timestamp_data[employee][field][0] <= int(timestamp) < timestamp_data[employee][field][1]:
+                    fields.append(f"{field}({value})")
+            fields.sort()
+            returned_data.append(", ".join(fields))
+
+    def backup_query(query):
+        timestamp = int(query[1])
+        backup_data = {}
+        backup_timestamps = {}
+        total_backups = 0
+
+        for employee in query_data:
+            for field, value in query_data[employee].items():
+                if field in timestamp_data[employee]:
+                    ts_info = timestamp_data[employee][field]
+                    if len(ts_info) == 1:
+                        if ts_info[0] <= timestamp:
+                            backup_data[employee] = backup_data.get(employee, {})
+                            backup_data[employee][field] = value
+                            backup_timestamps[employee] = backup_timestamps.get(employee, {})
+                            backup_timestamps[employee][field] = ts_info
+                            total_backups += 1
+                    elif ts_info[0] <= timestamp < ts_info[1]:
+                        remaining_ttl = ts_info[1] - timestamp
+                        backup_data[employee] = backup_data.get(employee, {})
+                        backup_data[employee][field] = value
+                        backup_timestamps[employee] = backup_timestamps.get(employee, {})
+                        backup_timestamps[employee][field] = [ts_info[0], remaining_ttl]
+                        total_backups += 1
+
+        backups[timestamp] = (backup_data, backup_timestamps)
+        backups_total_backups[timestamp] = total_backups
+        returned_data.append(str(total_backups))
+
+    def restore(query):
+        timestamp = int(query[1])
+        timestamp_to_restore = int(query[2])
+        backup_times = sorted(backups.keys(), reverse=True)
+
+        for time in backup_times:
+            if time <= timestamp_to_restore:
+                backup_data, backup_timestamps = backups[time]
+                query_data.clear()
+                timestamp_data.clear()
+
+                for employee in backup_data:
+                    query_data[employee] = backup_data[employee]
+                for employee in backup_timestamps:
+                    timestamp_data[employee] = timestamp_data.get(employee, {})
+                    for field, ts_info in backup_timestamps[employee].items():
+                        if len(ts_info) == 1:
+                            timestamp_data[employee][field] = ts_info
+                        else:
+                            initial_timestamp, remaining_ttl = ts_info
+                            new_expiry = timestamp + remaining_ttl
+                            timestamp_data[employee][field] = [timestamp, new_expiry]
+                break
+
+        returned_data.append("")
 
     for query in queries:
-        if query[0] == "CREATE_ACCOUNT":
-            timestamp = query[1]
-            account = query[2]
-            if account in accounts:
-                results.append(False)
-            else:
-                accounts[account] = {"time_created": timestamp, "balance": 0, "transactions": [], "pending": 0}
-                accounts_with_most_activity[account] = 0
-                results.append(True)
-        elif query[0] == "TOP_ACTIVITY":
-            n = int(query[2])
-            # Sort by balance first (descending), then by account name (ascending)
-            sorted_account_transactions = sorted(accounts_with_most_activity.items(), key=lambda x: (-x[1], x[0]))
-            resulting_transactions = []
-            for i in range(min(n, len(sorted_account_transactions))):
-                account, balance = sorted_account_transactions[i]
-                resulting_transactions.append(f"{account}({balance})")
-            results.append(", ".join(resulting_transactions))
-        elif query[0] == "TRANSFER":
-            timestamp = query[1]
-            account1 = query[2]
-            account2 = query[3]
-            amount = query[4]
-            if account1 not in accounts or account2 not in accounts or account1 == account2 or accounts[account1]["balance"] < int(amount):
-                results.append("")
-            else:
-                transfers += 1
-                transfer_id = f"transfer{transfers}"
-                accounts[account1]["balance"] -= int(amount)
-                accounts[account2]["pending"] += int(amount)
-                successful_transfers[transfer_id] = {"timestamp": timestamp, "source": account1, "target": account2, "amount": amount}
-                results.append(transfer_id)
-        elif query[0] == "ACCEPT_TRANSFER":
-            timestamp = int(query[1])
-            account = query[2]
-            transfer_id = query[3]
-            if transfer_id in successful_transfers:
-                transfer = successful_transfers[transfer_id]
-                if transfer["target"] != account:
-                    results.append(False)
-                elif (timestamp - transfer["timestamp"]) >= TRANSFER_EXPIRATION_PERIOD:
-                    results.append(False)
-                else:
-                    accounts[account]["balance"] += transfer["amount"]
-                    accounts[account]["pending"] -= transfer["amount"]
-                    accounts[transfer["source"]]["transactions"].append((transfer["timestamp"], -transfer["amount"]))
-                    accounts[transfer["target"]]["transactions"].append((transfer["timestamp"], transfer["amount"]))
-                    accounts_with_most_activity[transfer["source"]] += transfer["amount"]
-                    accounts_with_most_activity[transfer["target"]] += transfer["amount"]
-                    successful_transfers.pop(transfer_id)
-                    results.append(True)
-            else:
-                results.append(False)
-        elif query[0] == "ACCOUNT_MERGE":
-            account1 = query[2]
-            account2 = query[3]
-            if account1 not in accounts or account2 not in accounts:
-                results.append(False)
-                continue
-            accounts[account1]["balance"] += accounts[account2]["balance"]
-            accounts[account1]["transactions"].extend(accounts[account2]["transactions"])
-            accounts.pop(account2)
-            results.append(True)
-        else:
-            account = query[2]
-            amount = query[3]
-            if account not in accounts:
-                results.append("")
-            else:
-                if query[0] == "DEPOSIT":
-                    accounts[account]["balance"] += int(amount)
-                elif query[0] == "PAY":
-                    if int(amount) > accounts[account]["balance"]:
-                        results.append("")
-                        continue
-                    accounts[account]["balance"] -= int(amount)
-                results.append(str(accounts[account]["balance"]))
-                accounts_with_most_activity[account] += int(amount)
+        key = query[0]
+        if key == "SET":
+            set_query(query)
+        elif key == "GET":
+            get_query(query)
+        elif key == "DELETE":
+            delete_query(query)
+        elif key == "SCAN":
+            scan_query(query)
+        elif key == "SCAN_BY_PREFIX":
+            scan_by_prefix_query(query)
+        elif key == "SET_AT":
+            set_at_query(query)
+        elif key == "SET_AT_WITH_TTL":
+            set_at_with_ttl_query(query)
+        elif key == "GET_AT":
+            get_at_query(query)
+        elif key == "SCAN_BY_PREFIX_AT":
+            scan_by_prefix_at_query(query)
+        elif key == "DELETE_AT":
+            delete_at_query(query)
+        elif key == "SCAN_AT":
+            scan_at(query)
+        elif key == "BACKUP":
+            backup_query(query)
+        elif key == "RESTORE":
+            restore(query)
 
-    return results
+    print(returned_data)
+    return returned_data
 
 
-queries1 = [
-    ["CREATE_ACCOUNT", 1, "account1"],
-    ["CREATE_ACCOUNT", 2, "account2"],
-    ["DEPOSIT", 3, "account1", 1000],
-    ["DEPOSIT", 4, "account2", 1500],
-    ["PAY", 5, "account1", 1000],
-    ["PAY", 6, "account2", 2000],
-    ["TOP_ACTIVITY", 7, 2],
-    ["CREATE_ACCOUNT", 8, "account3"],
-    ["CREATE_ACCOUNT", 9, "account4"],
-    ["CREATE_ACCOUNT", 10, "account5"],
-    ["DEPOSIT", 11, "account3", 2500],
-    ["DEPOSIT", 12, "account4", 2500],
-    ["DEPOSIT", 13, "account5", 2500],
-    ["TOP_ACTIVITY", 14, 2],
-    ["TOP_ACTIVITY", 15, 3],
-    ["TOP_ACTIVITY", 16, 5],
-    ["TRANSFER", 17, "account1", "account3", 500],
-    ["TRANSFER", 18, "account2", "account4", 1000],
-    ["ACCEPT_TRANSFER", 19, "account3", "transfer1"],
-    ["ACCEPT_TRANSFER", 20, "account4", "transfer2"],
-    ["ACCEPT_TRANSFER", 21, "account4", "transfer1"],
-    ["ACCOUNT_MERGE", 22, "account1", "account2"]
-]
-result1 = [True, True, '1000', '1500', '0', '', 'account1(2000), account2(1500)', True, True, True, '2500', '2500', '2500', 'account3(2500), account4(2500)', 'account3(2500), account4(2500), account5(2500)', 'account3(2500), account4(2500), account5(2500), account1(2000), account2(1500)', "", "transfer1", False, False, True, True]
-print(solution(queries=queries1))
-print(solution(queries=queries1) == result1)
+print(solution([
+    ["SET_AT_WITH_TTL", "A", "B", "C", "1", "10"],
+    ["BACKUP", "3"],
+    ["SET_AT", "A", "D", "E", "4"],
+    ["BACKUP", "5"],
+    ["DELETE_AT", "A", "B", "8"],
+    ["BACKUP", "9"],
+    ["RESTORE", "10", "7"],
+    ["BACKUP", "11"],
+    ["SCAN_AT", "A", "15"],
+    ["SCAN_AT", "A", "16"],
+]) == ["", "1", "", "1", "true", "1", "", "1", "B(C), D(E)", "D(E)"])
+
+# could not get the final part of part 4, so this question is not entirely correct, every function besides backup_query and restore worked as expected

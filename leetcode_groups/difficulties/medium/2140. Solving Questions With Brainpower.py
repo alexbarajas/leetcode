@@ -1,0 +1,1 @@
+../../../all_leetcode/2140. Solving Questions With Brainpower.py

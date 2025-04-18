@@ -28,4 +28,5 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
     return dummy.next
 
 
-print(linkedlist_to_array(mergeTwoLists(array_to_linkedlist([1,2,4]), array_to_linkedlist([1,3,4]))) == [1,1,2,3,4,4])
+print(linkedlist_to_array(mergeTwoLists(array_to_linkedlist([1, 2, 4]), array_to_linkedlist([1, 3, 4]))) == [1, 1, 2, 3,
+                                                                                                             4, 4])

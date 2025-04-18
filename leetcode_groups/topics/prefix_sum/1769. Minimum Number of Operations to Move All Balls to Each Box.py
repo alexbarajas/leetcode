@@ -1,0 +1,1 @@
+../../../all_leetcode/1769. Minimum Number of Operations to Move All Balls to Each Box.py

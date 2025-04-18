@@ -48,7 +48,7 @@
         "difficulty": "easy",
         "topics": [
             "math",
-            "dynamic programming"
+            "1d dynamic programming"
         ]
     },
     "1469. Find All The Lonely Nodes": {
@@ -131,7 +131,7 @@
     "2370. Longest Ideal Subsequence": {
         "difficulty": "medium",
         "topics": [
-            "dynamic programming"
+            "1d dynamic programming"
         ]
     },
     "2461. Maximum Sum of Distinct Subarrays With Length K": {
@@ -276,7 +276,7 @@
         "difficulty": "medium",
         "topics": [
             "matrix",
-            "dynamic programming"
+            "2d dynamic programming"
         ]
     },
     "1325. Delete Leaves With a Given Value": {
@@ -304,7 +304,7 @@
         "difficulty": "medium",
         "topics": [
             "string",
-            "dynamic programming"
+            "1d dynamic programming"
         ]
     },
     "2597. The Number of Beautiful Subsets": {
@@ -414,6 +414,269 @@
         "topics": [
             "array",
             "stack"
+        ]
+    },
+    "3178. Find the Child Who Has the Ball After K Seconds": {
+        "difficulty": "easy",
+        "topics": [
+            "math"
+        ]
+    },
+    "3179. Find the N-th Value After K Seconds": {
+        "difficulty": "medium",
+        "topics": [
+            "array"
+        ]
+    },
+    "2148. Count Elements With Strictly Smaller and Greater Elements ": {
+        "difficulty": "easy",
+        "topics": [
+            "array"
+        ]
+    },
+    "2150. Find All Lonely Numbers in the Array": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "array"
+        ]
+    },
+    "75. Sort Colors": {
+        "difficulty": "medium",
+        "topics": [
+            "two pointers",
+            "array"
+        ]
+    },
+    "945. Minimum Increment to Make Array Unique": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "greedy"
+        ]
+    },
+    "1564. Put Boxes Into the Warehouse I": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "greedy"
+        ]
+    },
+    "62. Unique Paths": {
+        "difficulty": "medium",
+        "topics": [
+            "1d dynamic programming"
+        ]
+    },
+    "3185. Count Pairs That Form a Complete Day II": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table"
+        ]
+    },
+    "633. Sum of Square Numbers": {
+        "difficulty": "medium",
+        "topics": [
+            "math",
+            "two pointers",
+            "binary search"
+        ]
+    },
+    "1482. Minimum Number of Days to Make m Bouquets": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "binary search"
+        ]
+    },
+    "1552. Magnetic Force Between Two Balls": {
+        "difficulty": "medium",
+        "topics": [
+            "binary search",
+            "array"
+        ]
+    },
+    "1052. Grumpy Bookstore Owner": {
+        "difficulty": "medium",
+        "topics": [
+            "sliding window",
+            "array"
+        ]
+    },
+    "1509. Minimum Difference Between Largest and Smallest Value in Three Moves": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "greedy"
+        ]
+    },
+    "216. Combination Sum III": {
+        "difficulty": "medium",
+        "topics": [
+            "backtracking",
+            "array"
+        ]
+    },
+    "959. Regions Cut By Slashes": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "hash table",
+            "dfs",
+            "matrix"
+        ]
+    },
+    "2109. Adding Spaces to a String": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "two pointers",
+            "string"
+        ]
+    },
+    "20. Valid Parentheses": {
+        "difficulty": "easy",
+        "topics": [
+            "stack"
+        ]
+    },
+    "2825. Make String a Subsequence Using Cyclic Increments": {
+        "difficulty": "medium",
+        "topics": [
+            "two pointers",
+            "string"
+        ]
+    },
+    "2337. Move Pieces to Obtain a String": {
+        "difficulty": "medium",
+        "topics": [
+            "two pointers",
+            "string"
+        ]
+    },
+    "2554. Maximum Number of Integers to Choose From a Range I": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "greedy"
+        ]
+    },
+    "3152. Special Array II": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "prefix sum"
+        ]
+    },
+    "2981. Find Longest Special Substring That Occurs Thrice I": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "sliding window",
+            "hash table"
+        ]
+    },
+    "2779. Maximum Beauty of an Array After Applying Operation": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "sliding window"
+        ]
+    },
+    "1891. Cutting Ribbons": {
+        "difficulty": "medium",
+        "topics": [
+            "binary search"
+        ]
+    },
+    "769. Max Chunks To Make Sorted": {
+        "difficulty": "medium",
+        "topics": [
+            "prefix sum",
+            "greedy"
+        ]
+    },
+    "1014. Best Sightseeing Pair": {
+        "difficulty": "medium",
+        "topics": [
+            "1d dynamic programming",
+            "greedy"
+        ]
+    },
+    "2559. Count Vowel Strings in Ranges": {
+        "difficulty": "medium",
+        "topics": [
+            "prefix sum",
+            "array"
+        ]
+    },
+    "2381. Shifting Letters II": {
+        "difficulty": "medium",
+        "topics": [
+            "prefix sum",
+            "array"
+        ]
+    },
+    "1769. Minimum Number of Operations to Move All Balls to Each Box": {
+        "difficulty": "medium",
+        "topics": [
+            "prefix sum"
+        ]
+    },
+    "1730. Shortest Path to Get Food": {
+        "difficulty": "medium",
+        "topics": [
+            "bfs",
+            "matrix"
+        ]
+    },
+    "1765. Map of Highest Peak": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "matrix",
+            "bfs"
+        ]
+    },
+    "1267. Count Servers that Communicate": {
+        "difficulty": "medium",
+        "topics": [
+            "matrix",
+            "array"
+        ]
+    },
+    "2658. Maximum Number of Fish in a Grid": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "dfs"
+        ]
+    },
+    "2364. Count Number of Bad Pairs": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table"
+        ]
+    },
+    "2342. Max Sum of a Pair With Equal Sum of Digits": {
+        "difficulty": "medium",
+        "topics": [
+            "hash table",
+            "array"
+        ]
+    },
+    "3066. Minimum Operations to Exceed Threshold Value II": {
+        "difficulty": "medium",
+        "topics": [
+            "heap",
+            "array"
+        ]
+    },
+    "2140. Solving Questions With Brainpower": {
+        "difficulty": "medium",
+        "topics": [
+            "array",
+            "1d dynamic programming"
         ]
     }
 }

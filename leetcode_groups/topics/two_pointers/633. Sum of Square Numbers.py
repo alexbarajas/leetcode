@@ -1,0 +1,1 @@
+../../../all_leetcode/633. Sum of Square Numbers.py
