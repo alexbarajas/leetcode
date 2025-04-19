@@ -41,10 +41,10 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata):
-    """Generates a Markdown table row for the README with encoded link to local solutions."""
+    """Generates a Markdown table row with explicit link descriptions."""
     encoded_filename = urllib.parse.quote(metadata['filename'])
-    relative_path = f"/all_leetcode/{encoded_filename}"
-    return f"| [{metadata['title']}]({metadata['link']}) | [{metadata['filename']}]({relative_path}) |\n"
+    repo_link = f"/all_leetcode/{encoded_filename}"
+    return f"| {metadata['title']} | [LeetCode Link]({metadata['link']}) | [Repo Solution]({repo_link}) |\n"
 
 
 if __name__ == "__main__":
