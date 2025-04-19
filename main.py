@@ -41,7 +41,7 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
-    """Generates a detailed, multi-line entry for each problem."""
+    """Generates a problem title with LeetCode link, followed by repo links."""
     encoded_filename_py = urllib.parse.quote(f"{metadata['filename']}")
     repo_link_py = f"/all_leetcode/{encoded_filename_py}"
 
@@ -52,11 +52,10 @@ def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
     repo_link_js = f"/all_leetcode/{encoded_filename_js}"
     js_exists = os.path.exists(os.path.join(all_leetcode_dir, js_filename))
 
-    entry = f"{metadata['title']}\n"
-    entry += f"- Leetcode: [{metadata['title']}]({metadata['link']})\n"
-    entry += f"- Repo Python: [Python]({repo_link_py})\n"
+    entry = f"{metadata['title']} ([Leetcode]({metadata['link']}))\n"
+    entry += f"  - Python: [Repo]({repo_link_py})\n"
     if js_exists:
-        entry += f"- Repo JavaScript: [JavaScript]({repo_link_js})\n"
+        entry += f"  - JavaScript: [Repo]({repo_link_js})\n"
     return entry
 
 

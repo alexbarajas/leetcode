@@ -32,3 +32,7 @@ Sum | [LeetCode Link](https://leetcode.com/problems/two-sum/) | [Repo Solution](
 1. Two Sum
 - Leetcode: [1. Two Sum](https://leetcode.com/problems/two-sum/)
 - Repo Python: [Python](/all_leetcode/1.%20Two%20Sum.py)
+1. Two Sum ([Leetcode](https://leetcode.com/problems/two-sum/))
+  - Python: [Repo](/all_leetcode/1.%20Two%20Sum.py)
+1. Two Sum ([Leetcode](https://leetcode.com/problems/two-sum/))
+  - Python: [Repo](/all_leetcode/1.%20Two%20Sum.py)
