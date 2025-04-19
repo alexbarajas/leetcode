@@ -63,29 +63,32 @@ def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
 
 
 if __name__ == "__main__":
-    filepath = os.path.join(ALL_LEETCODE_DIR, "1. Two Sum.py")
-    metadata = extract_metadata(filepath)
+    all_leetcode_path = os.path.join(os.getcwd(), ALL_LEETCODE_DIR)  # Get absolute path
+    for filename in os.listdir(all_leetcode_path):
+        if filename.endswith(".py"):
+            filepath = os.path.join(all_leetcode_path, filename)
+            metadata = extract_metadata(filepath)
+            if metadata:
+                markdown_entry = generate_markdown_entry(metadata)
 
-    if metadata:
-        print("Extracted Metadata:")
-        print(metadata)  # Print the entire metadata dictionary
+                # Update Difficulty README
+                difficulty_dir = os.path.join(DIFFICULTY_README_DIR, metadata["difficulty"])
+                os.makedirs(difficulty_dir, exist_ok=True)
+                readme_path_difficulty = os.path.join(difficulty_dir, "README.md")
+                with open(readme_path_difficulty, 'a', encoding='utf-8') as f:
+                    f.write(markdown_entry)
+                print(f"Added '{metadata['title']}' to '{readme_path_difficulty}'")
 
-        markdown_entry = generate_markdown_entry(metadata)
-
-        # Update Difficulty README
-        difficulty_dir = os.path.join(DIFFICULTY_README_DIR, metadata["difficulty"])
-        os.makedirs(difficulty_dir, exist_ok=True)  # Ensure directory exists
-        update_readme(difficulty_dir, "README.md", markdown_entry)
-        print(f"Added '{metadata['title']}' to '{difficulty_dir}/README.md'")
-
-        # Update Topic READMEs
-        for topic in metadata["topics"]:
-            if topic:  # Ensure the topic string is not empty
-                topic_dir = os.path.join(TOPIC_README_DIR, topic)
-                os.makedirs(topic_dir, exist_ok=True)  # Ensure topic directory exists
-                update_readme(topic_dir, "README.md", markdown_entry)
-                print(f"Added '{metadata['title']}' to '{topic_dir}/README.md'")
+                # Update Topic READMEs
+                for topic in metadata["topics"]:
+                    if topic:
+                        topic_dir = os.path.join(TOPIC_README_DIR, topic.replace(" ",
+                                                                                 "_"))  # Handle spaces in topic names for directories
+                        os.makedirs(topic_dir, exist_ok=True)
+                        readme_path_topic = os.path.join(topic_dir, "README.md")
+                        with open(readme_path_topic, 'a', encoding='utf-8') as f:
+                            f.write(markdown_entry)
+                        print(f"Added '{metadata['title']}' to '{readme_path_topic}'")
             else:
-                print(f"Warning: Encountered an empty topic for '{metadata['title']}'.")
-    else:
-        print(f"Could not extract metadata from '{filepath}'.")
+                pass
+                # print(f"Could not extract metadata from '{filepath}'.")
