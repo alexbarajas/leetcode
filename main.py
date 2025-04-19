@@ -56,7 +56,7 @@ def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
     entry += f"  - [Python]({repo_link_py})\n"
     if js_exists:
         entry += f"  - [JavaScript]({repo_link_js})\n"
-    return entry
+    return f"- {metadata['title']} ([LeetCode]({metadata['link']}))\n"
 
 
 if __name__ == "__main__":
