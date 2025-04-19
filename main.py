@@ -52,8 +52,8 @@ def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
     repo_link_js = f"/all_leetcode/{encoded_filename_js}"
     js_exists = os.path.exists(os.path.join(all_leetcode_dir, js_filename))
 
-    entry = f"{metadata['title']} ([Leetcode]({metadata['link']}))\n"
-    entry += f"  - Python: [Repo]({repo_link_py})\n"
+    entry = f"{metadata["title"].split(".")[0]}.{metadata["title"].split(".")[1]}\n"
+    entry += f"  - [Python]({repo_link_py})\n"
     if js_exists:
         entry += f"  - JavaScript: [Repo]({repo_link_js})\n"
     return entry
