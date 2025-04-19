@@ -41,10 +41,10 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata):
-    """Generates a Markdown table row with explicit link descriptions."""
+    """Generates a bulleted list entry with separators."""
     encoded_filename = urllib.parse.quote(metadata['filename'])
     repo_link = f"/all_leetcode/{encoded_filename}"
-    return f"| {metadata['title']} | [LeetCode Link]({metadata['link']}) | [Repo Solution]({repo_link}) |\n"
+    return f"- {metadata['title']} | [LeetCode]({metadata['link']}) | [Repo]({repo_link})\n"
 
 
 if __name__ == "__main__":

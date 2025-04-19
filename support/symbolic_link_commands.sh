@@ -1,6 +1,3 @@
-ln -s ../../../all_leetcode/1.\ Two\ Sum.py ../leetcode_groups/difficulties/easy/1.\ Two\ Sum.py
-ln -s ../../../all_leetcode/1.\ Two\ Sum.py ../leetcode_groups/topics/array/1.\ Two\ Sum.py
-ln -s ../../../all_leetcode/1.\ Two\ Sum.py ../leetcode_groups/topics/hash_table/1.\ Two\ Sum.py
 ln -s ../../../all_leetcode/9.\ Palindrome\ Number.py ../leetcode_groups/difficulties/easy/9.\ Palindrome\ Number.py
 ln -s ../../../all_leetcode/9.\ Palindrome\ Number.py ../leetcode_groups/topics/math/9.\ Palindrome\ Number.py
 ln -s ../../../all_leetcode/14.\ Longest\ Common\ Prefix.py ../leetcode_groups/difficulties/easy/14.\ Longest\ Common\ Prefix.py
