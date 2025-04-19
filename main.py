@@ -41,7 +41,7 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
-    """Generates a format where the title links to LeetCode, and languages link to repo."""
+    """Generates a concise format where the title links to LeetCode, and languages are the repo links."""
     encoded_filename_py = urllib.parse.quote(f"{metadata['filename']}")
     repo_link_py = f"/all_leetcode/{encoded_filename_py}"
 
@@ -53,9 +53,9 @@ def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
     js_exists = os.path.exists(os.path.join(all_leetcode_dir, js_filename))
 
     entry = f"- [{metadata['title']}]({metadata['link']})\n"
-    entry += f"  - Python: [Python]({repo_link_py})\n"
+    entry += f"  - [Python]({repo_link_py})\n"
     if js_exists:
-        entry += f"  - JavaScript: [JavaScript]({repo_link_js})\n"
+        entry += f"  - [JavaScript]({repo_link_js})\n"
     return entry
 
 
