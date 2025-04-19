@@ -50,3 +50,7 @@ Sum | [LeetCode Link](https://leetcode.com/problems/two-sum/) | [Repo Solution](
   - [Python](/all_leetcode/1.%20Two%20Sum.py)
 - 1. Two Sum ([LeetCode](https://leetcode.com/problems/two-sum/))
 - 1. Two Sum ([LeetCode](https://leetcode.com/problems/two-sum/))
+- 1. [Two Sum](https://leetcode.com/problems/two-sum/)
+  - [Python](/all_leetcode/1.%20Two%20Sum.py)
+- 1. [Two Sum](https://leetcode.com/problems/two-sum/)
+  - [Python](/all_leetcode/1.%20Two%20Sum.py)
