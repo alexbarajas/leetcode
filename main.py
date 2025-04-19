@@ -41,13 +41,7 @@ def update_readme(directory, filename, entry):
 
 
 def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
-    """Generates a format with the title linking to LeetCode and language names linking to repo."""
-    # Extract the problem name without the leading number and period
-    match = re.match(r"^\d+\.\s*(.*)", metadata['title'])
-    problem_name = match.group(1).strip() if match else metadata['title']
-    problem_number = metadata['title'].split('.')[0].strip() if '.' in metadata['title'] and metadata['title'][
-        0].isdigit() else ""
-
+    """Generates a problem title with LeetCode link, followed by repo links."""
     encoded_filename_py = urllib.parse.quote(f"{metadata['filename']}")
     repo_link_py = f"/all_leetcode/{encoded_filename_py}"
 
@@ -58,10 +52,10 @@ def generate_markdown_entry(metadata, all_leetcode_dir="all_leetcode"):
     repo_link_js = f"/all_leetcode/{encoded_filename_js}"
     js_exists = os.path.exists(os.path.join(all_leetcode_dir, js_filename))
 
-    entry = f"- {problem_number}. [{problem_name}]({metadata['link']})\n"
-    entry += f"  - [Python]({repo_link_py})\n"
+    entry = f"{metadata['title']} ([Leetcode]({metadata['link']}))\n"
+    entry += f"  - Python: [Repo]({repo_link_py})\n"
     if js_exists:
-        entry += f"  - [JavaScript]({repo_link_js})\n"
+        entry += f"  - JavaScript: [Repo]({repo_link_js})\n"
     return entry
 
 
