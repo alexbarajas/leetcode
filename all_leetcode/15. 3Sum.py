@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 15. 3Sum
+Link: https://leetcode.com/problems/3sum/
+Difficulty: Medium
+Topics: Array, Two Pointers
+"""
+
 from typing import List
 
 

@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 20. Valid Parentheses
+Link: https://leetcode.com/problems/valid-parentheses/
+Difficulty: Easy
+Topics: String, Stack
+"""
+
 
 def isValid(s: str) -> bool:
     # 1. set up a check hashmap that maps the left:right of the parentheses sets
@@ -21,6 +28,7 @@ def isValid(s: str) -> bool:
     # 3. at the end return if there is not a stack
     return not stack
 
+
 def isValid1(s: str) -> bool:
     brackets = {
         "{": "}",
@@ -39,9 +47,7 @@ def isValid1(s: str) -> bool:
     return not stack
 
 
-
 print(isValid("()[]{}"))
 print(isValid1("()[]{}"))
 print(not isValid("([)]"))
 print(not isValid1("([)]"))
-

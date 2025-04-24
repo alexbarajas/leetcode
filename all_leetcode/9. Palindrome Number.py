@@ -1,4 +1,9 @@
 """
+LeetCode Problem: 9. Palindrome Number
+Link: https://leetcode.com/problems/palindrome-number/
+Difficulty: Easy
+Topics: Math
+
 Given an integer x, return true if x is a palindrome, and false otherwise.
 """
 

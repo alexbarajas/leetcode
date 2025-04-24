@@ -1,6 +1,14 @@
+"""
+LeetCode Problem: 21. Merge Two Sorted Lists
+Link: https://leetcode.com/problems/merge-two-sorted-lists/
+Difficulty: Easy
+Topics: Linked List
+"""
+
+from typing import Optional
+
 from support.classes import ListNode
 from support.functions import array_to_linkedlist, linkedlist_to_array
-from typing import Optional
 
 
 def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:

@@ -4,3 +4,11 @@
 # PyCharm settings
 .idea/
 
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
+venv/
+*.egg-info/
