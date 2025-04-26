@@ -1,3 +1,11 @@
+"""
+LeetCode Problem: 62. Unique Paths
+Link: https://leetcode.com/problems/unique-paths/
+Difficulty: Medium
+Topics: 2D Dynamic Programming, Matrix
+"""
+
+
 def uniquePaths(m: int, n: int) -> int:
     # 0. base case, if either number is 1, return 1
     if m == 1 or n == 1:

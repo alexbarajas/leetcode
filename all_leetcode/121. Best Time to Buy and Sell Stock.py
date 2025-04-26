@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 121. Best Time to Buy and Sell Stock
+Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+Difficulty: Easy
+Topics: Array, Greedy
+"""
+
 from typing import List
 
 

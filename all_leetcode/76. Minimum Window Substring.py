@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 76. Minimum Window Substring
+Link: https://leetcode.com/problems/minimum-window-substring/
+Difficulty: Hard
+Topics: Hash Table, Sliding Window, String
+"""
+
 import collections
 
 
@@ -16,7 +23,7 @@ def minWindow(s: str, t: str) -> str:
     answer = [-1, -1]
     answerLength = float("inf")
 
-    # 3. using 2 pointers, start left at 0, and go thru s using right
+    # 3. using sliding window, start left at 0, and go thru s using right
     left = 0
     for right in range(len(s)):
         # 3.1. add each letter to countS as you see them with their count

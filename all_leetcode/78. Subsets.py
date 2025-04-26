@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 78. Subsets
+Link: https://leetcode.com/problems/subsets/
+Difficulty: Medium
+Topics: Array, Backtracking
+"""
+
 from typing import List
 
 

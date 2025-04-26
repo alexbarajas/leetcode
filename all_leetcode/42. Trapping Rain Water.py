@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 42. Trapping Rain Water
+Link: https://leetcode.com/problems/trapping-rain-water/
+Difficulty: Hard
+Topics: Two Pointers, Array
+"""
+
 from typing import List
 
 

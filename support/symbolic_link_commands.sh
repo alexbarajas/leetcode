@@ -1,9 +1,3 @@
-ln -s ../../../all_leetcode/9.\ Palindrome\ Number.py ../leetcode_groups/difficulties/easy/9.\ Palindrome\ Number.py
-ln -s ../../../all_leetcode/9.\ Palindrome\ Number.py ../leetcode_groups/topics/math/9.\ Palindrome\ Number.py
-ln -s ../../../all_leetcode/14.\ Longest\ Common\ Prefix.py ../leetcode_groups/difficulties/easy/14.\ Longest\ Common\ Prefix.py
-ln -s ../../../all_leetcode/14.\ Longest\ Common\ Prefix.py ../leetcode_groups/topics/string/14.\ Longest\ Common\ Prefix.py
-ln -s ../../../all_leetcode/104.\ Maximum\ Depth\ of\ Binary\ Tree.py ../leetcode_groups/difficulties/easy/104.\ Maximum\ Depth\ of\ Binary\ Tree.py
-ln -s ../../../all_leetcode/104.\ Maximum\ Depth\ of\ Binary\ Tree.py ../leetcode_groups/topics/binary_tree/104.\ Maximum\ Depth\ of\ Binary\ Tree.py
 ln -s ../../../all_leetcode/226.\ Invert\ Binary\ Tree.py ../leetcode_groups/difficulties/easy/226.\ Invert\ Binary\ Tree.py
 ln -s ../../../all_leetcode/226.\ Invert\ Binary\ Tree.py ../leetcode_groups/topics/binary_tree/226.\ Invert\ Binary\ Tree.py
 ln -s ../../../all_leetcode/463.\ Island\ Perimeter.py ../leetcode_groups/difficulties/easy/463.\ Island\ Perimeter.py
@@ -24,10 +18,6 @@ ln -s ../../../all_leetcode/2000.\ Reverse\ Prefix\ of\ Word.py ../leetcode_grou
 ln -s ../../../all_leetcode/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py ../leetcode_groups/difficulties/easy/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py
 ln -s ../../../all_leetcode/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py ../leetcode_groups/topics/array/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py
 ln -s ../../../all_leetcode/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py ../leetcode_groups/topics/hash_table/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py
-ln -s ../../../all_leetcode/49.\ Group\ Anagrams.py ../leetcode_groups/difficulties/medium/49.\ Group\ Anagrams.py
-ln -s ../../../all_leetcode/49.\ Group\ Anagrams.py ../leetcode_groups/topics/array/49.\ Group\ Anagrams.py
-ln -s ../../../all_leetcode/49.\ Group\ Anagrams.py ../leetcode_groups/topics/hash_table/49.\ Group\ Anagrams.py
-ln -s ../../../all_leetcode/49.\ Group\ Anagrams.py ../leetcode_groups/topics/string/49.\ Group\ Anagrams.py
 ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/difficulties/medium/200.\ Number\ of\ Islands.py
 ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/topics/graphs/200.\ Number\ of\ Islands.py
 ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/topics/matrix/200.\ Number\ of\ Islands.py
@@ -67,9 +57,6 @@ ln -s ../../../all_leetcode/3075.\ Maximize\ Happiness\ of\ Selected\ Children.p
 ln -s ../../../all_leetcode/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\ Fixed.py ../leetcode_groups/difficulties/medium/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\ Fixed.py
 ln -s ../../../all_leetcode/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\ Fixed.py ../leetcode_groups/topics/heap/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\ Fixed.py
 ln -s ../../../all_leetcode/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\ Fixed.py ../leetcode_groups/topics/greedy/3119.\ Maximum\ Number\ of\ Potholes\ That\ Can\ Be\ Fixed.py
-ln -s ../../../all_leetcode/42.\ Trapping\ Rain\ Water.py ../leetcode_groups/difficulties/hard/42.\ Trapping\ Rain\ Water.py
-ln -s ../../../all_leetcode/42.\ Trapping\ Rain\ Water.py ../leetcode_groups/topics/two_pointers/42.\ Trapping\ Rain\ Water.py
-ln -s ../../../all_leetcode/42.\ Trapping\ Rain\ Water.py ../leetcode_groups/topics/array/42.\ Trapping\ Rain\ Water.py
 ln -s ../../../all_leetcode/21.\ Merge\ Two\ Sorted\ Lists.py ../leetcode_groups/difficulties/easy/21.\ Merge\ Two\ Sorted\ Lists.py
 ln -s ../../../all_leetcode/21.\ Merge\ Two\ Sorted\ Lists.py ../leetcode_groups/topics/linked_list/21.\ Merge\ Two\ Sorted\ Lists.py
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/difficulties/easy/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
@@ -90,37 +77,16 @@ ln -s ../../../all_leetcode/128.\ Longest\ Consecutive\ Sequence.py ../leetcode_
 ln -s ../../../all_leetcode/125.\ Valid\ Palindrome.py ../leetcode_groups/difficulties/easy/125.\ Valid\ Palindrome.py
 ln -s ../../../all_leetcode/125.\ Valid\ Palindrome.py ../leetcode_groups/topics/string/125.\ Valid\ Palindrome.py
 ln -s ../../../all_leetcode/125.\ Valid\ Palindrome.py ../leetcode_groups/topics/two_pointers/125.\ Valid\ Palindrome.py
-ln -s ../../../all_leetcode/15.\ 3Sum.py ../leetcode_groups/difficulties/medium/15.\ 3Sum.py
-ln -s ../../../all_leetcode/15.\ 3Sum.py ../leetcode_groups/topics/array/15.\ 3Sum.py
-ln -s ../../../all_leetcode/15.\ 3Sum.py ../leetcode_groups/topics/two_pointers/15.\ 3Sum.py
-ln -s ../../../all_leetcode/11.\ Container\ With\ Most\ Water.py ../leetcode_groups/difficulties/medium/11.\ Container\ With\ Most\ Water.py
-ln -s ../../../all_leetcode/11.\ Container\ With\ Most\ Water.py ../leetcode_groups/topics/array/11.\ Container\ With\ Most\ Water.py
-ln -s ../../../all_leetcode/11.\ Container\ With\ Most\ Water.py ../leetcode_groups/topics/two_pointers/11.\ Container\ With\ Most\ Water.py
-ln -s ../../../all_leetcode/11.\ Container\ With\ Most\ Water.py ../leetcode_groups/topics/greedy/11.\ Container\ With\ Most\ Water.py
-ln -s ../../../all_leetcode/121.\ Best\ Time\ to\ Buy\ and\ Sell\ Stock.py ../leetcode_groups/difficulties/easy/121.\ Best\ Time\ to\ Buy\ and\ Sell\ Stock.py
-ln -s ../../../all_leetcode/121.\ Best\ Time\ to\ Buy\ and\ Sell\ Stock.py ../leetcode_groups/topics/array/121.\ Best\ Time\ to\ Buy\ and\ Sell\ Stock.py
-ln -s ../../../all_leetcode/121.\ Best\ Time\ to\ Buy\ and\ Sell\ Stock.py ../leetcode_groups/topics/greedy/121.\ Best\ Time\ to\ Buy\ and\ Sell\ Stock.py
-ln -s ../../../all_leetcode/3.\ Longest\ Substring\ Without\ Repeating\ Characters.py ../leetcode_groups/difficulties/medium/3.\ Longest\ Substring\ Without\ Repeating\ Characters.py
-ln -s ../../../all_leetcode/3.\ Longest\ Substring\ Without\ Repeating\ Characters.py ../leetcode_groups/topics/hash_table/3.\ Longest\ Substring\ Without\ Repeating\ Characters.py
-ln -s ../../../all_leetcode/3.\ Longest\ Substring\ Without\ Repeating\ Characters.py ../leetcode_groups/topics/sliding_window/3.\ Longest\ Substring\ Without\ Repeating\ Characters.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/difficulties/medium/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/hash_table/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/sliding_window/424.\ Longest\ Repeating\ Character\ Replacement.py
-ln -s ../../../all_leetcode/76.\ Minimum\ Window\ Substring.py ../leetcode_groups/difficulties/hard/76.\ Minimum\ Window\ Substring.py
-ln -s ../../../all_leetcode/76.\ Minimum\ Window\ Substring.py ../leetcode_groups/topics/hash_table/76.\ Minimum\ Window\ Substring.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/difficulties/medium/861.\ Score\ After\ Flipping\ Matrix.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/topics/greedy/861.\ Score\ After\ Flipping\ Matrix.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/topics/bit_manipulation/861.\ Score\ After\ Flipping\ Matrix.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/topics/matrix/861.\ Score\ After\ Flipping\ Matrix.py
-ln -s ../../../all_leetcode/64.\ Minimum\ Path\ Sum.py ../leetcode_groups/difficulties/medium/64.\ Minimum\ Path\ Sum.py
-ln -s ../../../all_leetcode/64.\ Minimum\ Path\ Sum.py ../leetcode_groups/topics/matrix/64.\ Minimum\ Path\ Sum.py
-ln -s ../../../all_leetcode/64.\ Minimum\ Path\ Sum.py ../leetcode_groups/topics/2d_dynamic_programming/64.\ Minimum\ Path\ Sum.py
 ln -s ../../../all_leetcode/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py ../leetcode_groups/difficulties/medium/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py
 ln -s ../../../all_leetcode/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py ../leetcode_groups/topics/dfs/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py
 ln -s ../../../all_leetcode/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py ../leetcode_groups/topics/binary_tree/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py
-ln -s ../../../all_leetcode/78.\ Subsets.py ../leetcode_groups/difficulties/medium/78.\ Subsets.py
-ln -s ../../../all_leetcode/78.\ Subsets.py ../leetcode_groups/topics/array/78.\ Subsets.py
-ln -s ../../../all_leetcode/78.\ Subsets.py ../leetcode_groups/topics/backtracking/78.\ Subsets.py
 ln -s ../../../all_leetcode/36.\ Valid\ Sudoku.py ../leetcode_groups/difficulties/medium/36.\ Valid\ Sudoku.py
 ln -s ../../../all_leetcode/36.\ Valid\ Sudoku.py ../leetcode_groups/topics/hash_table/36.\ Valid\ Sudoku.py
 ln -s ../../../all_leetcode/36.\ Valid\ Sudoku.py ../leetcode_groups/topics/matrix/36.\ Valid\ Sudoku.py
@@ -185,17 +151,12 @@ ln -s ../../../all_leetcode/2148.\ Count\ Elements\ With\ Strictly\ Smaller\ and
 ln -s ../../../all_leetcode/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py ../leetcode_groups/difficulties/medium/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py
 ln -s ../../../all_leetcode/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py ../leetcode_groups/topics/hash_table/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py
 ln -s ../../../all_leetcode/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py ../leetcode_groups/topics/array/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py
-ln -s ../../../all_leetcode/75.\ Sort\ Colors.py ../leetcode_groups/difficulties/medium/75.\ Sort\ Colors.py
-ln -s ../../../all_leetcode/75.\ Sort\ Colors.py ../leetcode_groups/topics/two_pointers/75.\ Sort\ Colors.py
-ln -s ../../../all_leetcode/75.\ Sort\ Colors.py ../leetcode_groups/topics/array/75.\ Sort\ Colors.py
 ln -s ../../../all_leetcode/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py ../leetcode_groups/difficulties/medium/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py
 ln -s ../../../all_leetcode/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py ../leetcode_groups/topics/array/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py
 ln -s ../../../all_leetcode/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py ../leetcode_groups/topics/greedy/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py
 ln -s ../../../all_leetcode/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py ../leetcode_groups/difficulties/medium/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py
 ln -s ../../../all_leetcode/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py ../leetcode_groups/topics/array/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py
 ln -s ../../../all_leetcode/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py ../leetcode_groups/topics/greedy/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py
-ln -s ../../../all_leetcode/62.\ Unique\ Paths.py ../leetcode_groups/difficulties/medium/62.\ Unique\ Paths.py
-ln -s ../../../all_leetcode/62.\ Unique\ Paths.py ../leetcode_groups/topics/1d_dynamic_programming/62.\ Unique\ Paths.py
 ln -s ../../../all_leetcode/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py ../leetcode_groups/difficulties/medium/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py
 ln -s ../../../all_leetcode/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py ../leetcode_groups/topics/hash_table/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py
 ln -s ../../../all_leetcode/633.\ Sum\ of\ Square\ Numbers.py ../leetcode_groups/difficulties/medium/633.\ Sum\ of\ Square\ Numbers.py
@@ -226,8 +187,6 @@ ln -s ../../../all_leetcode/2109.\ Adding\ Spaces\ to\ a\ String.py ../leetcode_
 ln -s ../../../all_leetcode/2109.\ Adding\ Spaces\ to\ a\ String.py ../leetcode_groups/topics/array/2109.\ Adding\ Spaces\ to\ a\ String.py
 ln -s ../../../all_leetcode/2109.\ Adding\ Spaces\ to\ a\ String.py ../leetcode_groups/topics/two_pointers/2109.\ Adding\ Spaces\ to\ a\ String.py
 ln -s ../../../all_leetcode/2109.\ Adding\ Spaces\ to\ a\ String.py ../leetcode_groups/topics/string/2109.\ Adding\ Spaces\ to\ a\ String.py
-ln -s ../../../all_leetcode/20.\ Valid\ Parentheses.py ../leetcode_groups/difficulties/easy/20.\ Valid\ Parentheses.py
-ln -s ../../../all_leetcode/20.\ Valid\ Parentheses.py ../leetcode_groups/topics/stack/20.\ Valid\ Parentheses.py
 ln -s ../../../all_leetcode/2825.\ Make\ String\ a\ Subsequence\ Using\ Cyclic\ Increments.py ../leetcode_groups/difficulties/medium/2825.\ Make\ String\ a\ Subsequence\ Using\ Cyclic\ Increments.py
 ln -s ../../../all_leetcode/2825.\ Make\ String\ a\ Subsequence\ Using\ Cyclic\ Increments.py ../leetcode_groups/topics/two_pointers/2825.\ Make\ String\ a\ Subsequence\ Using\ Cyclic\ Increments.py
 ln -s ../../../all_leetcode/2825.\ Make\ String\ a\ Subsequence\ Using\ Cyclic\ Increments.py ../leetcode_groups/topics/string/2825.\ Make\ String\ a\ Subsequence\ Using\ Cyclic\ Increments.py
