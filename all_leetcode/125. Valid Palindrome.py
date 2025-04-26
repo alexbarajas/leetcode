@@ -1,3 +1,11 @@
+"""
+LeetCode Problem: 125. Valid Palindrome
+Link: https://leetcode.com/problems/valid-palindrome/
+Difficulty: Easy
+Topics: Two Pointers, String
+"""
+
+
 def isPalindrome(s: str) -> bool:
     # 1. come up with the left and right pointers first
     left = 0

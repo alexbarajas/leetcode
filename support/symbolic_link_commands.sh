@@ -72,11 +72,6 @@ ln -s ../../../all_leetcode/347.\ Top\ K\ Frequent\ Elements.py ../leetcode_grou
 ln -s ../../../all_leetcode/347.\ Top\ K\ Frequent\ Elements.py ../leetcode_groups/topics/heap/347.\ Top\ K\ Frequent\ Elements.py
 ln -s ../../../all_leetcode/238.\ Product\ of\ Array\ Except\ Self.py ../leetcode_groups/difficulties/medium/238.\ Product\ of\ Array\ Except\ Self.py
 ln -s ../../../all_leetcode/238.\ Product\ of\ Array\ Except\ Self.py ../leetcode_groups/topics/array/238.\ Product\ of\ Array\ Except\ Self.py
-ln -s ../../../all_leetcode/128.\ Longest\ Consecutive\ Sequence.py ../leetcode_groups/difficulties/medium/128.\ Longest\ Consecutive\ Sequence.py
-ln -s ../../../all_leetcode/128.\ Longest\ Consecutive\ Sequence.py ../leetcode_groups/topics/hash_table/128.\ Longest\ Consecutive\ Sequence.py
-ln -s ../../../all_leetcode/125.\ Valid\ Palindrome.py ../leetcode_groups/difficulties/easy/125.\ Valid\ Palindrome.py
-ln -s ../../../all_leetcode/125.\ Valid\ Palindrome.py ../leetcode_groups/topics/string/125.\ Valid\ Palindrome.py
-ln -s ../../../all_leetcode/125.\ Valid\ Palindrome.py ../leetcode_groups/topics/two_pointers/125.\ Valid\ Palindrome.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/difficulties/medium/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/hash_table/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/sliding_window/424.\ Longest\ Repeating\ Character\ Replacement.py
@@ -90,9 +85,6 @@ ln -s ../../../all_leetcode/1325.\ Delete\ Leaves\ With\ a\ Given\ Value.py ../l
 ln -s ../../../all_leetcode/36.\ Valid\ Sudoku.py ../leetcode_groups/difficulties/medium/36.\ Valid\ Sudoku.py
 ln -s ../../../all_leetcode/36.\ Valid\ Sudoku.py ../leetcode_groups/topics/hash_table/36.\ Valid\ Sudoku.py
 ln -s ../../../all_leetcode/36.\ Valid\ Sudoku.py ../leetcode_groups/topics/matrix/36.\ Valid\ Sudoku.py
-ln -s ../../../all_leetcode/131.\ Palindrome\ Partitioning.py ../leetcode_groups/difficulties/medium/131.\ Palindrome\ Partitioning.py
-ln -s ../../../all_leetcode/131.\ Palindrome\ Partitioning.py ../leetcode_groups/topics/string/131.\ Palindrome\ Partitioning.py
-ln -s ../../../all_leetcode/131.\ Palindrome\ Partitioning.py ../leetcode_groups/topics/1d_dynamic_programming/131.\ Palindrome\ Partitioning.py
 ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../leetcode_groups/difficulties/medium/2597.\ The\ Number\ of\ Beautiful\ Subsets.py
 ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../leetcode_groups/topics/backtracking/2597.\ The\ Number\ of\ Beautiful\ Subsets.py
 ln -s ../../../all_leetcode/2597.\ The\ Number\ of\ Beautiful\ Subsets.py ../leetcode_groups/topics/hash_table/2597.\ The\ Number\ of\ Beautiful\ Subsets.py

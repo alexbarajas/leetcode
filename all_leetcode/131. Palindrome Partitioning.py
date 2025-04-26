@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 131. Palindrome Partitioning
+Link: https://leetcode.com/problems/palindrome-partitioning/
+Difficulty: Medium
+Topics: String, 1D Dynamic Programming
+"""
+
 from typing import List
 
 
@@ -60,4 +67,3 @@ def partition(s: str) -> List[List[str]]:
 print(partition("aab") == [["a", "a", "b"], ["aa", "b"]])
 print(partition("a") == [["a"]])
 print(partition("aa") == [["a", "a"], ["aa"]])
-
