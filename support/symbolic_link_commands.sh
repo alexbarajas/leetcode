@@ -18,11 +18,6 @@ ln -s ../../../all_leetcode/2000.\ Reverse\ Prefix\ of\ Word.py ../leetcode_grou
 ln -s ../../../all_leetcode/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py ../leetcode_groups/difficulties/easy/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py
 ln -s ../../../all_leetcode/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py ../leetcode_groups/topics/array/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py
 ln -s ../../../all_leetcode/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py ../leetcode_groups/topics/hash_table/2441.\ Largest\ Positive\ Integer\ That\ Exists\ With\ Its\ Negative.py
-ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/difficulties/medium/200.\ Number\ of\ Islands.py
-ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/topics/graphs/200.\ Number\ of\ Islands.py
-ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/topics/matrix/200.\ Number\ of\ Islands.py
-ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/topics/bfs/200.\ Number\ of\ Islands.py
-ln -s ../../../all_leetcode/200.\ Number\ of\ Islands.py ../leetcode_groups/topics/dfs/200.\ Number\ of\ Islands.py
 ln -s ../../../all_leetcode/623.\ Add\ One\ Row\ to\ Tree.py ../leetcode_groups/difficulties/medium/623.\ Add\ One\ Row\ to\ Tree.py
 ln -s ../../../all_leetcode/623.\ Add\ One\ Row\ to\ Tree.py ../leetcode_groups/topics/binary_tree/623.\ Add\ One\ Row\ to\ Tree.py
 ln -s ../../../all_leetcode/623.\ Add\ One\ Row\ to\ Tree.py ../leetcode_groups/topics/dfs/623.\ Add\ One\ Row\ to\ Tree.py
@@ -62,16 +57,6 @@ ln -s ../../../all_leetcode/21.\ Merge\ Two\ Sorted\ Lists.py ../leetcode_groups
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/difficulties/easy/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/topics/array/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/topics/matrix/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
-ln -s ../../../all_leetcode/217.\ Contains\ Duplicate.py ../leetcode_groups/difficulties/easy/217.\ Contains\ Duplicate.py
-ln -s ../../../all_leetcode/217.\ Contains\ Duplicate.py ../leetcode_groups/topics/hash_table/217.\ Contains\ Duplicate.py
-ln -s ../../../all_leetcode/242.\ Valid\ Anagram.py ../leetcode_groups/difficulties/easy/242.\ Valid\ Anagram.py
-ln -s ../../../all_leetcode/242.\ Valid\ Anagram.py ../leetcode_groups/topics/hash_table/242.\ Valid\ Anagram.py
-ln -s ../../../all_leetcode/242.\ Valid\ Anagram.py ../leetcode_groups/topics/string/242.\ Valid\ Anagram.py
-ln -s ../../../all_leetcode/347.\ Top\ K\ Frequent\ Elements.py ../leetcode_groups/difficulties/medium/347.\ Top\ K\ Frequent\ Elements.py
-ln -s ../../../all_leetcode/347.\ Top\ K\ Frequent\ Elements.py ../leetcode_groups/topics/hash_table/347.\ Top\ K\ Frequent\ Elements.py
-ln -s ../../../all_leetcode/347.\ Top\ K\ Frequent\ Elements.py ../leetcode_groups/topics/heap/347.\ Top\ K\ Frequent\ Elements.py
-ln -s ../../../all_leetcode/238.\ Product\ of\ Array\ Except\ Self.py ../leetcode_groups/difficulties/medium/238.\ Product\ of\ Array\ Except\ Self.py
-ln -s ../../../all_leetcode/238.\ Product\ of\ Array\ Except\ Self.py ../leetcode_groups/topics/array/238.\ Product\ of\ Array\ Except\ Self.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/difficulties/medium/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/hash_table/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/sliding_window/424.\ Longest\ Repeating\ Character\ Replacement.py
@@ -113,13 +98,6 @@ ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\
 ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py ../leetcode_groups/topics/bit_manipulation/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py
 ln -s ../../../all_leetcode/3167.\ Better\ Compression\ of\ String.py ../leetcode_groups/difficulties/medium/3167.\ Better\ Compression\ of\ String.py
 ln -s ../../../all_leetcode/3167.\ Better\ Compression\ of\ String.py ../leetcode_groups/topics/string/3167.\ Better\ Compression\ of\ String.py
-ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/difficulties/easy/409.\ Longest\ Palindrome.py
-ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/topics/hash_table/409.\ Longest\ Palindrome.py
-ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/topics/string/409.\ Longest\ Palindrome.py
-ln -s ../../../all_leetcode/409.\ Longest\ Palindrome.py ../leetcode_groups/topics/greedy/409.\ Longest\ Palindrome.py
-ln -s ../../../all_leetcode/187.\ Repeated\ DNA\ Sequences.py ../leetcode_groups/difficulties/medium/187.\ Repeated\ DNA\ Sequences.py
-ln -s ../../../all_leetcode/187.\ Repeated\ DNA\ Sequences.py ../leetcode_groups/topics/hash_table/187.\ Repeated\ DNA\ Sequences.py
-ln -s ../../../all_leetcode/187.\ Repeated\ DNA\ Sequences.py ../leetcode_groups/topics/string/187.\ Repeated\ DNA\ Sequences.py
 ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/difficulties/medium/531.\ Lonely\ Pixel\ I.py
 ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/hash_table/531.\ Lonely\ Pixel\ I.py
 ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/array/531.\ Lonely\ Pixel\ I.py

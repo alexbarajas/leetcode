@@ -1,5 +1,12 @@
-import heapq
+"""
+LeetCode Problem: 347. Top K Frequent Elements
+Link: https://leetcode.com/problems/top-k-frequent-elements/
+Difficulty: Medium
+Topics: Hash Table, Heap
+"""
+
 import collections
+import heapq
 from typing import List
 
 
@@ -39,7 +46,7 @@ def topKFrequent(nums: List[int], k: int) -> List[int]:
         answer.append(heapq.heappop(heap)[1])
 
     # 4. return the answer array
-    return answer[::-1]  # this uses reversed in case they as for it to be in the correct order
+    return answer[::-1]  # this uses reversed in case they ask for it to be in the correct order
 
 
 print(topKFrequent(nums=[1, 1, 1, 2, 2, 3], k=2) == [1, 2])

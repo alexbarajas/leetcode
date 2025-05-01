@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 217. Contains Duplicate
+Link: https://leetcode.com/problems/contains-duplicate/
+Difficulty: Easy
+Topics: Hash Table
+"""
+
 from typing import List
 
 

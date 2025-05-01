@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 409. Longest Palindrome
+Link: https://leetcode.com/problems/longest-palindrome/
+Difficulty: Easy
+Topics: Hash Table, String, Greedy
+"""
+
 
 def longestPalindrome(s: str) -> int:
     # # SOLUTION 1: uses a hashmap
