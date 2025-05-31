@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 945. Minimum Increment to Make Array Unique
+Link: https://leetcode.com/problems/minimum-increment-to-make-array-unique/
+Difficulty: Medium
+Topics: Array, Greedy
+"""
+
 from typing import List
 
 

@@ -57,9 +57,6 @@ ln -s ../../../all_leetcode/21.\ Merge\ Two\ Sorted\ Lists.py ../leetcode_groups
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/difficulties/easy/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/topics/array/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
 ln -s ../../../all_leetcode/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py ../leetcode_groups/topics/matrix/2373.\ Largest\ Local\ Values\ in\ a\ Matrix.py
-ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/difficulties/medium/424.\ Longest\ Repeating\ Character\ Replacement.py
-ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/hash_table/424.\ Longest\ Repeating\ Character\ Replacement.py
-ln -s ../../../all_leetcode/424.\ Longest\ Repeating\ Character\ Replacement.py ../leetcode_groups/topics/sliding_window/424.\ Longest\ Repeating\ Character\ Replacement.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/difficulties/medium/861.\ Score\ After\ Flipping\ Matrix.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/topics/greedy/861.\ Score\ After\ Flipping\ Matrix.py
 ln -s ../../../all_leetcode/861.\ Score\ After\ Flipping\ Matrix.py ../leetcode_groups/topics/bit_manipulation/861.\ Score\ After\ Flipping\ Matrix.py
@@ -98,10 +95,6 @@ ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\
 ln -s ../../../all_leetcode/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py ../leetcode_groups/topics/bit_manipulation/1404.\ Number\ of\ Steps\ to\ Reduce\ a\ Number\ in\ Binary\ Representation\ to\ One.py
 ln -s ../../../all_leetcode/3167.\ Better\ Compression\ of\ String.py ../leetcode_groups/difficulties/medium/3167.\ Better\ Compression\ of\ String.py
 ln -s ../../../all_leetcode/3167.\ Better\ Compression\ of\ String.py ../leetcode_groups/topics/string/3167.\ Better\ Compression\ of\ String.py
-ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/difficulties/medium/531.\ Lonely\ Pixel\ I.py
-ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/hash_table/531.\ Lonely\ Pixel\ I.py
-ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/array/531.\ Lonely\ Pixel\ I.py
-ln -s ../../../all_leetcode/531.\ Lonely\ Pixel\ I.py ../leetcode_groups/topics/matrix/531.\ Lonely\ Pixel\ I.py
 ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/difficulties/medium/1366.\ Rank\ Teams\ by\ Votes.py
 ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/topics/array/1366.\ Rank\ Teams\ by\ Votes.py
 ln -s ../../../all_leetcode/1366.\ Rank\ Teams\ by\ Votes.py ../leetcode_groups/topics/hash_table/1366.\ Rank\ Teams\ by\ Votes.py
@@ -121,18 +114,11 @@ ln -s ../../../all_leetcode/2148.\ Count\ Elements\ With\ Strictly\ Smaller\ and
 ln -s ../../../all_leetcode/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py ../leetcode_groups/difficulties/medium/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py
 ln -s ../../../all_leetcode/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py ../leetcode_groups/topics/hash_table/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py
 ln -s ../../../all_leetcode/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py ../leetcode_groups/topics/array/2150.\ Find\ All\ Lonely\ Numbers\ in\ the\ Array.py
-ln -s ../../../all_leetcode/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py ../leetcode_groups/difficulties/medium/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py
-ln -s ../../../all_leetcode/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py ../leetcode_groups/topics/array/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py
-ln -s ../../../all_leetcode/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py ../leetcode_groups/topics/greedy/945.\ Minimum\ Increment\ to\ Make\ Array\ Unique.py
 ln -s ../../../all_leetcode/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py ../leetcode_groups/difficulties/medium/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py
 ln -s ../../../all_leetcode/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py ../leetcode_groups/topics/array/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py
 ln -s ../../../all_leetcode/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py ../leetcode_groups/topics/greedy/1564.\ Put\ Boxes\ Into\ the\ Warehouse\ I.py
 ln -s ../../../all_leetcode/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py ../leetcode_groups/difficulties/medium/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py
 ln -s ../../../all_leetcode/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py ../leetcode_groups/topics/hash_table/3185.\ Count\ Pairs\ That\ Form\ a\ Complete\ Day\ II.py
-ln -s ../../../all_leetcode/633.\ Sum\ of\ Square\ Numbers.py ../leetcode_groups/difficulties/medium/633.\ Sum\ of\ Square\ Numbers.py
-ln -s ../../../all_leetcode/633.\ Sum\ of\ Square\ Numbers.py ../leetcode_groups/topics/math/633.\ Sum\ of\ Square\ Numbers.py
-ln -s ../../../all_leetcode/633.\ Sum\ of\ Square\ Numbers.py ../leetcode_groups/topics/two_pointers/633.\ Sum\ of\ Square\ Numbers.py
-ln -s ../../../all_leetcode/633.\ Sum\ of\ Square\ Numbers.py ../leetcode_groups/topics/binary_search/633.\ Sum\ of\ Square\ Numbers.py
 ln -s ../../../all_leetcode/1482.\ Minimum\ Number\ of\ Days\ to\ Make\ m\ Bouquets.py ../leetcode_groups/difficulties/medium/1482.\ Minimum\ Number\ of\ Days\ to\ Make\ m\ Bouquets.py
 ln -s ../../../all_leetcode/1482.\ Minimum\ Number\ of\ Days\ to\ Make\ m\ Bouquets.py ../leetcode_groups/topics/array/1482.\ Minimum\ Number\ of\ Days\ to\ Make\ m\ Bouquets.py
 ln -s ../../../all_leetcode/1482.\ Minimum\ Number\ of\ Days\ to\ Make\ m\ Bouquets.py ../leetcode_groups/topics/binary_search/1482.\ Minimum\ Number\ of\ Days\ to\ Make\ m\ Bouquets.py

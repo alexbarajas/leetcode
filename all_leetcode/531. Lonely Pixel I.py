@@ -1,3 +1,10 @@
+"""
+LeetCode Problem: 531. Lonely Pixel I
+Link: https://leetcode.com/problems/lonely-pixel-i/
+Difficulty: Medium
+Topics: Array, Matrix, Hash Table
+"""
+
 from typing import List
 
 
