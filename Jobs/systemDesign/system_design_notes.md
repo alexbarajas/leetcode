@@ -1,0 +1,256 @@
+# System Design
+
+hello
+
+#### 1. Introduction
+- Start with a brief introduction to set the context for your system design discussion
+  - A DNS (Domain Name System) translates domain names like www.hello.com into readable IP addresses like 192.0.2.1.
+- A distributed system is a system whose components are located on different networked computers, which communicate and coordinate their actions by passing messages to one another.
+#### 2. High-Level System Overview
+- Provide an initial high-level overview of the system
+  - Actors:
+    - User
+    - Agency, that registers rooms/cars for a booking service or a brokerage for a stock service
+    - Admin, person that takes care of all the flight/car/room details in the application
+  - Entities:
+    - Users
+    - Flights/Cars/Rooms
+    - Booking
+    - Payment
+    - Notification Server
+- Include key components and their responsibilities.
+- Mention how different parts of the system interact.
+#### 3. Requirements and Goals
+- At the start ask about the requirements.
+  - Ask a lot of questions, make it like a conversation almost.
+  - Repeat the question so that the interviewers know that you understand the question, and ask for clarification and for whom the users are.
+  - Clarify all the requirements before you start writing anything down.
+  - You have to understand why you are building the system, who the users are.
+  - Mention the read/write ratio when discussing your data storage and database design choices.
+    - Explain how you optimize data structures, caching strategies, and database technologies to efficiently handle the expected read-heavy or write-heavy patterns associated with real-time stock trading.
+    - If you have a read-heavy workload, vertical scaling might be the most effective solution as it allows you to increase the resources (CPU, RAM, storage) of a single server, enabling quicker access to data.
+      - The application will be read-heavy because users will constantly be looking at prices and comparing them.
+    - On the other hand, if your workload involves a lot of write operations, horizontal scaling could be more advantageous since it involves distributing the data across multiple machines, allowing for parallel writing and reducing potential bottlenecks.
+  - Start off broad and then get more in detail if you have time later on.
+- Functional requirements define what the system should do
+  - If booking rooms or cars, the system should support the booking of different room types like standard, deluxe or car types like sedan or wagon for example.
+  - The user will book a room/car/flight type, but the admin is the one that books the specific room/car/flight.
+  - The system should be able to retrieve information such as who booked which room, or what rooms are booked by a specific customer.
+  - System should also allow customers to cancel their booking and provide with a refund if the cancellation occurs before 24 hours of the check-in time.
+  - System should send in notifications when the check-in time is nearing.
+  - Booking Service (Expedia):
+    - User should be able to select flight/room/car based on arrival + destination and date of travel. 
+    - User should be able to login. 
+    - select the item based on time/preference 
+    - User enters their personal details 
+      - mention how you will be using stateless servers because they don’t keep a users credentials, making it safer due to financial transactions taking place. the opposite would be stateful servers 
+    - Application should be able to make the payment 
+    - User receives a notification on the payment 
+      - Can vary based on his personal settings, such as receive an email and/or SMS message 
+    - User can contact customer support 
+    - User can manage their bookings
+  - Trading Service (Robinhood):
+    - Users should be able to register and log in securely using email/phone numbers and passwords.
+    - Users should be able to browse and search for stocks.
+      - Users should be able to place various types of trades
+      - Access to company profiles, financial reports, and news.
+    - Real-time stock data updates.
+      - Users should be able to view their history and account information
+    - Portfolio summaries including current holdings and overall performance.
+    - Users should be able to deposit and withdraw funds securely from multiple sources like debit cards and banking accounts
+    - Users can customize notifications for price changes, order executions, and account activity.
+    - Users can contact customer support for assistance.
+    - User data protection and encryption.
+- Non-functional requirements describe how well the system should do it
+  - Highlight any performance goals, scalability, availability, and latency requirements.
+  - Discuss scalability requirements, considering potential growth in user numbers and data volume. Include availability targets, ensuring the system remains accessible.
+    - vertical scaling can be viable at first but over time we will need to do more horizontal scaling
+  - Emphasize data integrity and consistency requirements, especially critical for financial systems, highlighting the need for strong consistency.
+    - strong consistency will be mentioned later
+  - Booking Service (Expedia):
+    - Application should perform efficiently with fast response times 
+      - could start off using REST API because they are simple to use, but later on use GraphQL because they work better with live data and can fetch multiple resources with a single request 
+    - Application should be scalable 
+      - should be able to handle a large amount of traffic 
+      - use stateless servers since they reduce the risk of session-related issues. 
+        - they eliminate the need of storing user session data on the server-side 
+    - Application should be secure and use encryption to secure user data and payment transactions 
+    - Application should be user friendly and accessible with all users 
+      - include options for people with disabilities 
+    - Application should be reliable 
+    - Application should be modular 
+      - in case there is any further requirement, you can enhance the app
+  - Trading Service (Robinhood):
+    - Low-latency trading execution.
+    - Minimal downtime and high availability.
+    - Scalability to handle a large number of concurrent users.
+    - Strong encryption for data in transit and at rest.
+    - Intuitive and user-friendly interface.
+    - The system should handle increasing load during peak trading hours.
+    - Minimal service disruptions and high system reliability.
+    - Regular automated data backups and disaster recovery planning.
+    - Tools for monitoring system performance, user behavior, and security incidents.
+    - Data analytics for improving the platform's performance and user experience.
+    - Comprehensive documentation for internal and external users.
+- Special considerations
+  - Clients might want different types of notifications. Some might want SMS, some might want emails. Take this into consideration.
+  - Detail user and administration aspects
+  - Towards the start after you clarified and have all the requirements, write down a list of features that you are designing for.
+  - If real-time updates are necessary (e.g., stock prices), discuss their importance and potential technologies to achieve real-time communication like WebSocket
+- API requirements
+  - Mention how APIs will connect end users to the backend so that their requests will happen.
+  - Start listing which APIs you will need based on the requirements list that you came up with.
+  - Unless specified otherwise, for APIs we should follow the RESTful convention and use HTTP to define input parameters and output responses
+  - Mention that you'll create detailed tables for each API. 
+    - |API Endpoint  |Description   |HTTP Method |Request Parameters  |Response Format |Authentication |
+    - |--------------|--------------|------------|--------------------|----------------|---------------| 
+    - |/stocks       |get stock info|GET         |None                |JSON            |not required   |
+    - |/stocks/{sym} |get sym info  |GET         |{symbol} (string)   |JSON            |not required   |
+#### 4. Data Model
+- Use the data model to verify that the design satisfies all the feature requirements.
+  - Do not go into too much detail too early, save it for later.
+- Define the data structures used in the system.
+  - Using the CAP Theorem, since our app will have financial transactions we need it to be consistent and available, and that’s why I plan to use a SQL server for it.
+  - Replication is when you duplicate the master database and only allow read operations from the new replica. 
+  - Sharding or Data Partitioning is when you partition your data records and store those records across multiple machines.
+  - You can do horizontal or vertical sharding
+  - Vertical sharding is when you take each table of data you have and put each table on a new machine.
+  - If you have a single large table, you can use horizontal sharding and break up that table across multiple machines.
+- Discuss the choice of databases (relational, NoSQL, etc.) and their purpose.
+  - Using a SQL (Structured Query Language) database instead of having text files on a hard drive is more efficient because we can use data structures such as binary trees to form relationships between the data so we can easily read and write exactly where we want in a dataset.
+    - reading from a SQL database using SQL queries is more efficient than reading from a txt file.
+    - SQL databases are typically ACID compliant, which ensures transactions are atomic, consistent, isolated, and durable. This makes them suitable for applications that require strict data consistency and integrity, such as financial systems.
+      - atomic means that every transaction is all or nothing
+      - consistent, so that foreign keys and other constraints will always be enforced
+        - any change maintains data integrity or is cancelled completely
+        - led to the creation of NoSQL
+        - consistency makes databases harder to scale
+        - NoSQL databases drop the consistency constraint and the whole idea of relations all together
+      - isolation means that different concurrent transactions won't interfere with each other
+      - durable, because data is stored on disks, so even if a machine restarts, the data will still be there
+  - Mention how you want to use PostgreSQL while starting out because it’s free and relational. You want it to be relational so you can easily manage the relationships between the different tables you will be using, such as for hotels, flights, car rentals and so on. I am also more familiar with PostgreSQL. A bottleneck of PostgreSQL is that if you are using a lot of data, then a lot of CPU power might be used, more than if you were using a non relational database like NoSQL. Inefficient queries can also be a bottleneck since they will increase the execution times in getting data.
+- Explain how data is organized, partitioned, and replicated if needed.
+#### 5. System Architecture
+- Break down the system into the various components:
+  - Frontend
+    - The user interface through which users interact with the platform.
+  - Backend
+    - The server-side logic, responsible for processing user requests and interacting with external services.
+  - Database
+    - To store user profiles, transactions, stock data, etc.
+  - External Services
+    - For real-time stock data, authentication, and payment processing.
+- Describe the architectural style (e.g., monolithic, microservices).
+- Explain the components/modules in detail, including their responsibilities.
+  - Proxy servers sit between a client and another server.
+  - A reverse proxy can help out a server and the client won’t know that the request and response are traveling through a proxy.
+  - Forward proxies work in the opposite way.
+- Discuss the Communication Protocols between components
+  - Some designs might call for 2-way communication between user and server. For this WebSocket is a good choice. WebSocket kind of works like a messaging app, where you don’t need to create a new request every time you want to make a call, it establishes a long-lived connection that allows the user and server to instantly exchange messages without having to make repeated requests. This makes WebSocket good for apps that need real-time updates such as Expedia with live price feeds, or a stock service to provide users with live stock price updates.
+- A class should have a single responsibility or job.
+#### 6. Scalability and Load Balancing
+- Explain how the system scales horizontally and vertically.
+  - Horizontal scaling is better because if you focus on vertical scaling by improving the CPU or memory for a single server you’re relying entirely on one server.
+    - If it goes down the company is in trouble, but with horizontal scaling you have a larger room for error since if one server goes down, you still have more.
+    - Let’s say you are doing horizontal scaling but are afraid of certain servers taking a higher load than others. This is where a load balancer is helpful. A load balancer’s job is to distribute traffic to the different servers you have to help with overall performance and scalability.
+    - The load balancer will route a client’s input and then distribute the data across multiple web servers.
+      - Nginx is a load balancer I have used but I’m not too familiar with it.
+    - Once you are scaling up it is best to change to NoSQL because they are designed to be horizontally scalable. Horizontally scalable means that you can add more servers to distribute the data and workload. This allows the database to handle increasing amounts of data and traffic for when you scale up. 
+    - Relational databases like PostgreSQL have limitations in horizontal scaling due to their schema and relationships between tables.
+- Discuss load balancing strategies and mechanisms to handle increased traffic.
+  - Load balancing and distributed architectures are common strategies for achieving scalability
+  - Kubernetes is good with scaling horizontally since it helps deployment and management of applications.
+  - Make sure the system doesn’t allow overbooking or double-booking. I think a service like WebSocket can help with overbooking because the updates between the server and user are in real-time.
+  - Load balancing rules are essential configurations within load balancers, used to evenly distribute incoming network traffic to multiple servers or resources.
+  - These rules specify how traffic should be distributed, including criteria like round-robin, health checks, session persistence, and URL path-based routing.
+  - They define the protocol, port, and backend server pool to direct requests to.
+  - Load balancing rules also handle important tasks like SSL offloading, rate limiting, and connection management.
+  - By intelligently routing traffic, load balancing rules enhance the performance, availability, and reliability of web services and applications, ensuring that no single server becomes overwhelmed and contributing to efficient resource utilization.
+  - We can use the Round Robin algorithm with a load balancer to ensure that each server gets an equal share of incoming requests.
+    - The Round Robin algorithm has a list of all the servers that can handle incoming requests and when a new request arrives, it is sent to the first server in the list. This happens until all servers are used up to their max capacity.
+  - Concurrency control is a crucial aspect of managing the performance and scalability of a system
+    - Concurrency refers to the simultaneous execution of multiple tasks or processes in a computer system. It allows for efficient resource utilization and can improve program performance by enabling tasks to run in parallel.
+    - However, managing concurrency can be complex, as it requires careful synchronization to avoid issues like race conditions and deadlocks.
+      - Managing concurrency involves coordinating multiple tasks or threads to ensure they don't interfere with each other while sharing resources.
+        - Race conditions occur when two or more threads access and modify shared data simultaneously, leading to unpredictable results.
+        - Deadlocks, on the other hand, are situations where multiple threads are waiting for each other to release resources, causing the program to come to a standstill.
+      - Effective concurrency control mechanisms, like locks and semaphores, are essential to prevent these issues and ensure the orderly execution of concurrent tasks.
+        - A semaphore is a synchronization primitive used in computer science and operating systems to control access to shared resources among multiple threads or processes, allowing them to coordinate and avoid conflicts.
+          - A synchronization primitive is a fundamental mechanism in computer science and concurrent programming that facilitates coordination and communication between multiple threads or processes, ensuring they access shared resources or execute specific tasks in a controlled and orderly manner to avoid conflicts and race conditions.
+#### 7. Caching and Performance Optimization
+- Describe caching strategies to improve system performance.
+  - Caching is important because accessing data from primary memory such RAM is faster than accessing data from secondary memory such as a hard drive
+  - By caching you can speed up the performance of your system.
+  - I haven’t used any caching services but know that Cassandra is popular, so I will try to read up on that and implement it into the system.
+  - Caching speed goes slowest to fastest from hard drive to RAM to CPU.
+    - In a traditional server environment, a SQL database can be stored in both the hard drive and RAM, but not in the CPU. The CPU processes the SQL queries and performs calculations based on the data stored in the RAM.
+    - Start off by caching in the hard drive and RAM, but as you scale globally look into CDNs (content delivery networks) because they cache using a network of servers throughout the world.
+    - When a user requests data from a server via the application, the CDN will deliver the data from the server closest to the user’s location.
+- Discuss techniques like CDN, memoization, or database indexing.
+#### 8. Data Storage and Persistence
+- Detail how data is stored and persisted.
+- Discuss data consistency and durability.
+#### 9. Security
+- Explain how the system ensures data security and user authentication.
+  - A stateless server has no state with the user’s info, the user needs to prove their identity every time they log in.
+  - In financial trading, data integrity is paramount.
+  - Financial markets are subject to strict regulatory requirements.
+    - Strong consistency can help the platform maintain compliance with regulations by ensuring that all transactions and account activities are recorded and processed correctly.
+  - Strong consistency ensures that all data across the platform is kept in a consistent and correct state. This is critical when handling transactions, account balances, and order execution to prevent errors that could lead to financial losses.
+    - Strong consistency guarantees that when an order is placed, modified, or canceled, the system will enforce the order's state correctly.
+      - Traders need to have confidence that their orders are executed as intended, and strong consistency helps ensure this by maintaining a consistent view of the order book. Strong consistency ensures that portfolio data, including positions and account balances, is always up-to-date and accurate.
+      - This is essential for traders to make informed decisions about their investments and manage their portfolios effectively
+    - Accurate and consistent data is crucial for risk management in financial trading. Strong consistency aids in calculating risk exposure, margin requirements, and other risk-related metrics accurately.
+    - In the financial industry, customer trust is vital.
+      - Strong consistency helps build trust by minimizing the risk of data inconsistencies, errors, or discrepancies that could erode customer confidence.
+  - However, it's important to note that achieving strong consistency in a distributed system can be challenging and often comes with trade-offs in terms of system performance and availability.
+    - Implementing strong consistency may require additional resources and may result in slightly higher latency compared to weaker consistency models, such as eventual consistency. 
+  - In practice, financial trading platforms like Robinhood may adopt a hybrid approach.
+    - They may use strong consistency for critical data, such as account balances and order execution, while relaxing (eventual) consistency requirements for less critical data to optimize performance and availability.
+      - This allows them to strike a balance between data integrity and system responsiveness, meeting the needs of both traders and the platform's operational requirements.
+- Discuss encryption, access control, and other security measures.
+#### 10. Fault Tolerance and Disaster Recovery
+- Describe how the system handles failures and recovers from them.
+- Discuss replication, redundancy, and backup strategies.
+  - Implement backup and disaster recovery solutions to ensure data integrity and system availability.
+  - horizontal scaling helps with redundancy and fault tolerance because if one of the servers goes down, the other servers can continue to fulfill requests
+    - this eliminates our previous single point of failure
+#### 11. API Design
+- Explain the design of APIs for internal and external communication.
+  - RESTful Convention: uses HTTP to define each APIs input parameters and output responses carefully. create tables with this data if you have to. watch https://www.youtube.com/watch?v=i7twT3x5yv8 for help on table examples. Then verify that the APIs satisfy the functional requirements. Don’t include APIs that don’t have anything to do with the functional requirements.
+  - REST makes APIs stateless with consistent guidelines
+  - REST APIs follow consistent guidelines. 200 status code == success, 400 status code == failure.
+    - REST APIs use JSONs. 
+  - GraphQL can fetch multiple resources with a single request using queries, instead of doing multiple requests like REST.
+    - GraphQL is format-agnostic but can use JSONs.
+  - REST might be better for when you’re starting out because it has simple APIs and can cache effectively, but GraphQL can be better as you scale as it offers client-driven queries and real-time updates.
+- Include API endpoints, request/response formats, and authentication.
+  - Implement a secure authentication system using technologies like OAuth or JWT (JSON Web Tokens).
+  - Define user roles and permissions for trading and portfolio management.
+  - Implement two-factor authentication for sensitive transactions.
+#### 12. Monitoring and Logging
+- Discuss how the system is monitored and what metrics are tracked.
+  - Implement monitoring tools and analytics to track system performance, user behavior, and security incidents
+- Describe the logging mechanisms for debugging and analysis.
+#### 13. Testing and Deployment
+- Explain testing strategies (unit, integration, load testing).
+  - Thoroughly test the platform with different scenarios, including stress testing, security testing, and usability testing.
+    - Stress Testing is a software testing technique that determines the robustness of software by testing beyond the limits of normal operation.
+  - have an assortment of every test that users might perform on the platform, and then execute them using JavaScript and Cypress weekly at least to make sure they are working as expected.
+- Describe deployment and release management processes.
+  - Decide on the deployment strategy (cloud-based, on-premises, or hybrid).
+  - Plan for regular maintenance and updates to keep the platform secure and up-to-date.
+#### 14. Conclusion
+- At the very end spend a few minutes summarizing the design.
+  - Focus on parts that are unique to this particular problem.
+  - Create comprehensive documentation for developers, operators, and users.
+- Summarize the key points of your design.
+- Mention any trade-offs you made and why. 
+- Leave enough time at the end to ask the interviewers questions about the company.
+#### 15. Questions for Interviewer
+- Prepare a list of questions to ask the interviewer about the design or any specific areas you'd like to explore further.
+#### 
+#### 
+#### 
+#### 
+#### 
